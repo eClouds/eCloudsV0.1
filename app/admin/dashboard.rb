@@ -16,7 +16,7 @@ ActiveAdmin.register_page "Dashboard" do
                th "Created at"
                th "Created by"
              end
-             Execution.order(:order => "created_at desc", :limit => 10).each do |execution|
+             Execution.all( :order => "created_at desc", :limit => 10).each do |execution|
                tr do
                  td link_to(execution.name, execution)
                  td execution.created_at
@@ -34,7 +34,7 @@ ActiveAdmin.register_page "Dashboard" do
                th "Event description"
                th "Created at"
              end
-             Event.order(:order => "created_at desc", :limit => 10).each do |event|
+             Event.all(:order => "created_at desc", :limit => 10).each do |event|
                tr do
                  td event.description
                  td event.created_at
