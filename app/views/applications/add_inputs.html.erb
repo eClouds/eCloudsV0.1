@@ -110,7 +110,7 @@
           <div class="field" id="fileButton" style="display: none">
             <%= f.label :value %>
             <%= link_to raw('<i class="icon-file icon-white"></i> Select File') , "#fileModal", :onclick => "set_field('#{(i).to_s}');" ,:class => "btn btn-info", :data => {:toggle => "modal"}, :role => "button" , :id => "but"+(i+1).to_s%>
-            <%= label_tag "lab"+(i+1).to_s, "", :id => 'lab'+(i+1).to_s%>
+            <%= label_tag "lab"+(i+=1).to_s, "", :id => 'lab'+(i).to_s%>
             <%= f.hidden_field :value, :id => 'inputs_'+(i).to_s%>
           </div>
 
@@ -118,7 +118,7 @@
           <div class="field" id="directoryButton" style="display: none">
             <%= f.label :value %>
             <%= link_to raw('<i class="icon-folder-open icon-white"></i> Select Directory') , "#directoryModal", :onclick => "set_field('#{(i).to_s}');" ,:class => "btn btn-success", :data => {:toggle => "modal"}, :role => "button" , :id => "but"+(i+1).to_s%>
-            <%= label_tag "lab"+(i+1).to_s, "", :id => 'lab'+(i+1).to_s%>
+            <%= label_tag "lab"+(i+=1).to_s, "", :id => 'lab'+(i).to_s%>
             <%= f.hidden_field :value, :id => 'inputs_'+(i).to_s%>
           </div>
 
