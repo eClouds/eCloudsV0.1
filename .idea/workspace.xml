@@ -34,19 +34,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/executions/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="14" selection-start="1937" selection-end="1937" vertical-scroll-proportion="-38.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="executions_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/executions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="30" selection-start="7693" selection-end="7693" vertical-scroll-proportion="0.5645161">
+            <state line="225" column="17" selection-start="7693" selection-end="7693" vertical-scroll-proportion="0.6451613">
               <folding>
                 <element signature="e#1874#2848#0" expanded="false" />
                 <element signature="e#2852#6614#0" expanded="false" />
@@ -54,6 +45,15 @@
                 <element signature="e#13208#13945#0" expanded="false" />
                 <element signature="e#13949#14179#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/executions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="22" selection-start="85" selection-end="85" vertical-scroll-proportion="-3.125">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,6 +135,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="executions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -686,20 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/executions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/executions/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="14" selection-start="1937" selection-end="1937" vertical-scroll-proportion="-38.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/applications.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -721,9 +747,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/executions/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="14" selection-start="1937" selection-end="1937" vertical-scroll-proportion="2.6293104">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/executions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="85" selection-end="85" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/executions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="30" selection-start="7693" selection-end="7693" vertical-scroll-proportion="0.5645161">
+        <state line="225" column="17" selection-start="7693" selection-end="7693" vertical-scroll-proportion="0.6451613">
           <folding>
             <element signature="e#1874#2848#0" expanded="false" />
             <element signature="e#2852#6614#0" expanded="false" />
