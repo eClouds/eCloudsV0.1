@@ -195,6 +195,7 @@ class ExecutionsController < InheritedResources::Base
     @execution = Execution.new(params[:execution])
     @execution.user_id = current_user.id
     @application = @execution.application
+    @num_jobs = 1
     @execution.time_per_job = @application.estimated_time
     @execution.vm_type = @application.vm_type
     puts 'CREATE EXECUTION'
@@ -223,7 +224,6 @@ class ExecutionsController < InheritedResources::Base
   def new
 
     @execution = Execution.new
-
     @execution.user_id = current_user.id
 
     #@uploader.success_action_redirect = cloud_files_url
