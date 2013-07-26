@@ -195,6 +195,10 @@ class ExecutionsController < InheritedResources::Base
     @execution = Execution.new(params[:execution])
     @execution.user_id = current_user.id
     @application = @execution.application
+
+    #Oscar Garces modifico para que el número de jobs iniciara en 1, de lo contrario
+    #Presenta errores por parámetros.
+    @execution.number_of_jobs = 1
     @execution.time_per_job = @application.estimated_time
     @execution.vm_type = @application.vm_type
     puts 'CREATE EXECUTION'
