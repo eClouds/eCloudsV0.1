@@ -25,6 +25,10 @@ function set_value(id, name) {
     $('#lab'+(parseInt(field)+1)).text("File Selected: "+name);
     $('#inputs_'+(parseInt(field)+1)).val(id);
 }
+function set_value2(id, name) {
+    $('#lab'+(parseInt(field)+1)).text("File Selected: "+name);
+    $('#inputs_'+(parseInt(field))).val(id);
+}
 function set_display(e, div) {
     if (e.checked)
     {
