@@ -112,7 +112,7 @@
         <ul class="nav nav-list">
           <%= render :partial => 'browser/treeview', :collection => @directories, :as => :directory %>
           <% @cloud_files.each do |cloud_file| %>
-              <li><%= link_to cloud_file.name, '#', :onclick => "set_value2('#{cloud_file.id}', '#{cloud_file.name}');", :data => {:dismiss => "modal"}  %></li>
+              <li><%= link_to cloud_file.name, '#', :onclick => "set_value('#{cloud_file.id}', '#{cloud_file.name}');", :data => {:dismiss => "modal"}  %></li>
           <% end %>
         </ul>
       </div>

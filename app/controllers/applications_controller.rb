@@ -67,6 +67,7 @@ class ApplicationsController < InheritedResources::Base
       @cloud_file = CloudFile.find(@input.value.to_i)
       @input.cloud_file = @cloud_file
       @input.value = @cloud_file.name
+
     end
     respond_to do |format|
       if @input.save

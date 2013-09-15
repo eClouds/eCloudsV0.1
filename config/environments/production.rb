@@ -133,7 +133,7 @@ ECloudsV01::Application.configure do
       :port => ENV["SMTP_PORT_PROD"],
       :user_name => ENV["SMTP_USER_NAME_PROD"],
       :password => ENV["SMTP_PASSWORD_PROD"],
-      :authentication => 'login',
+      :authentication => 'plain',
       :enable_starttls_auto => true
   }
 

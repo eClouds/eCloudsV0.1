@@ -1,6 +1,6 @@
 <ul class="nav nav-list">
   <li>
-    <input type="checkbox" id="item-0" /><label for="item-0" data-dismiss="modal" onclick="set_value2('<%= directory.id %>', '<%= directory.name %>');"><%= directory.name %> </label>
+    <input type="checkbox" id="item-0" /><label for="item-0" data-dismiss="modal" onclick="set_value('<%= directory.id %>', '<%= directory.name %>');"><%= directory.name %> </label>
       <ul class="nav nav-list">
       <% unless directory.children.empty? %>
           <%= render :partial => 'browser/treeview_no_files', :collection => directory.children, :as => :directory %>

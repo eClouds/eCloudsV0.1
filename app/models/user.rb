@@ -46,6 +46,7 @@ class User < ActiveRecord::Base
   def set_approved
     if !approved?
       self.toggle!(:approved)
+      self.funds= 100;
     end
   end
 

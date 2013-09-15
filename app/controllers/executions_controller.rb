@@ -284,7 +284,6 @@ class ExecutionsController < InheritedResources::Base
       @output_dir = Directory.find(@raw_inputs['output_dir'].to_i)
 
       @execution.directory =  @output_dir
-
       i=0
       @application.inputs.order('position asc').each do |app_input|
         @raw_input = @raw_inputs[i.to_s]
@@ -293,7 +292,7 @@ class ExecutionsController < InheritedResources::Base
 
           if app_input.is_file
             @file_id = @raw_input.to_i
-            @cloud_file = current_user.cloud_files.find(@file_id)
+            @cloud_file = CloudFile.find(@file_id)
 
             @execution_input.cloud_file = @cloud_file
             @execution_input.value = @cloud_file.name
@@ -310,7 +309,7 @@ class ExecutionsController < InheritedResources::Base
           elsif app_input.is_directory
 
             @directory_id = @raw_input.to_i
-            @directory = current_user.directories.find(@directory_id)
+            @directory = Directory.find(@directory_id)
 
             @execution_input.directory = @directory
             @execution_input.value = 'DIR('+@directory.name+')'
