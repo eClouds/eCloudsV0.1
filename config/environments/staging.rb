@@ -136,7 +136,7 @@ ECloudsV01::Application.configure do
       :user_name => ENV["SENDGRID_USSERNAME"],
       :password => ENV["SENDGRID_PASSWORD"],
       :authentication => 'plain',
-      :domain   => 'uniandes.edu.co',
+      :domain   => 'heroku.com',
       :enable_starttls_auto => true
   }
 
