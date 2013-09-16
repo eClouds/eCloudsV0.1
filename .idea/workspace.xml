@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/browser/_treeview_no_files.html.erb" afterPath="$PROJECT_DIR$/app/views/browser/_treeview_no_files.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applications/add_inputs.html.erb" afterPath="$PROJECT_DIR$/app/views/applications/add_inputs.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/applications_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/applications_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/executions/define_execution.html.erb" afterPath="$PROJECT_DIR$/app/views/executions/define_execution.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/cloud_file.rb" afterPath="$PROJECT_DIR$/app/models/cloud_file.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/executions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/executions_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/staging.rb" afterPath="$PROJECT_DIR$/config/environments/staging.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eCloudsV0.1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1377483687559" ignored="false" />
+    <file path="/Dummy.txt" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379312136595" ignored="false" />
     <file path="/application.js" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1372868124825" ignored="false" />
     <file path="/a.dummy" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1377479763277" ignored="false" />
-    <file path="/staging.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1372893285911" ignored="false" />
-    <file path="/development.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379240103205" ignored="false" />
+    <file path="/staging.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379367960964" ignored="false" />
+    <file path="/development.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379367923948" ignored="false" />
     <file path="/production.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379240107094" ignored="false" />
     <file path="/application.html.erb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1373910673755" ignored="false" />
     <file path="/executions_controller.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379234690560" ignored="false" />
@@ -50,43 +45,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="executions_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/executions_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="292" column="0" selection-start="9726" selection-end="9726" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#94#175#0" expanded="false" />
-                <element signature="e#179#297#0" expanded="false" />
-                <element signature="e#1676#1870#0" expanded="false" />
-                <element signature="e#1874#2848#0" expanded="false" />
-                <element signature="e#6620#7493#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="31" selection-start="4718" selection-end="4718" vertical-scroll-proportion="0.48701298">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="development.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="31" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
+            <state line="50" column="39" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.54545456">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registrations_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
+      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="136" column="6" selection-start="4725" selection-end="4725" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,19 +66,8 @@
       <file leaf-file-name="staging.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/staging.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="60" selection-start="4760" selection-end="4760" vertical-scroll-proportion="0.0">
+            <state line="137" column="31" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_inputs.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/applications/add_inputs.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="90" selection-start="4008" selection-end="4008" vertical-scroll-proportion="-10.041667">
-              <folding>
-                <element signature="e#2962#2983#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -130,7 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/environments/staging.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/correScheduler.sh" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
@@ -138,12 +97,14 @@
         <option value="$PROJECT_DIR$/app/models/input.rb" />
         <option value="$PROJECT_DIR$/app/controllers/applications_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/executions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/executions/define_execution.html.erb" />
         <option value="$PROJECT_DIR$/app/views/browser/_treeview_no_files.html.erb" />
         <option value="$PROJECT_DIR$/app/views/applications/add_inputs.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/models/cloud_file.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/environments/staging.rb" />
       </list>
     </option>
   </component>
@@ -155,8 +116,8 @@
     <option name="CUSTOM_FILTER" value="" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="91" />
-    <option name="y" value="53" />
+    <option name="x" value="527" />
+    <option name="y" value="24" />
     <option name="width" value="1215" />
     <option name="height" value="744" />
   </component>
@@ -216,7 +177,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,10 +226,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -248,7 +237,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
-  <component name="RunManager" selected="Rails.Debug">
+  <component name="RunManager" selected="Rake.checkPreschedulingQueue">
     <configuration default="false" name="checkPreschedulingQueue" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="eCloudsV0.1" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -257,11 +246,13 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
-        <env name="AMAZON_ACCESS_KEY_ID" value="AKIAI66WS2INNR3TRKUA" />
-        <env name="AMI_APP_CIENTIFICAS_NAME" value="ami-8a81e5e3" />
-        <env name="PRESCHEDULING_QUEUE" value="preSchedulingDevelopment" />
-        <env name="SCHEDULING_QUEUE" value="schedulingDevelopment" />
         <env name="AMAZON_SECRET_ACCESS_KEY" value="HIR1coyt0rjGIlYnf6ALoYNOgakNaRXFKfHFnLOW" />
+        <env name="PRESCHEDULING_QUEUE" value="preSchedulingDevelopment" />
+        <env name="SECURITY_GROUP" value="Eclouds" />
+        <env name="AMAZON_ACCESS_KEY_ID" value="AKIAI66WS2INNR3TRKUA" />
+        <env name="SCHEDULING_QUEUE" value="schedulingDevelopment" />
+        <env name="AMI_APP_CIENTIFICAS_NAME" value="ami-884c30e1" />
+        <env name="KEY_PAIR_NAME" value="eclouds" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" />
@@ -272,7 +263,7 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="checkPreschedulingQueue" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="staging" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="RAILS_ENV=staging" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
@@ -663,13 +654,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="91" y="53" width="1215" height="744" extended-state="1" />
+    <frame x="527" y="24" width="1215" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33441034" sideWeight="0.9885496" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4916986" sideWeight="0.6754658" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -745,60 +756,30 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p374@global/gems/actionpack-3.2.6/lib/action_dispatch/middleware/flash.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="0" selection-start="7380" selection-end="7380" vertical-scroll-proportion="0.45454547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p374@global/gems/actionpack-3.2.6/lib/action_controller/metal/rescue.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/applications_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.4132493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="1" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/browser/_treeview.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs193/fixnum.rb">
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="8" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.33216783">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/browser/_treeview_no_files.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="100" selection-start="133" selection-end="133" vertical-scroll-proportion="0.11070111">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6071428">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/executions/define_execution.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="36" selection-start="4660" selection-end="4660" vertical-scroll-proportion="-41.916668">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -810,59 +791,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/agent.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-10.214511">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.405844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cloud_file.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="50" selection-start="456" selection-end="456" vertical-scroll-proportion="0.48701298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cloud_files_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.46103895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="827" column="20" selection-start="19317" selection-end="19317" vertical-scroll-proportion="-0.6151419">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/applications/add_inputs.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="90" selection-start="4008" selection-end="4008" vertical-scroll-proportion="-10.041667">
+        <state line="115" column="52" selection-start="3416" selection-end="3416" vertical-scroll-proportion="0.5221843">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="31" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2962#2983#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.95454544">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/executions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="292" column="0" selection-start="9726" selection-end="9726" vertical-scroll-proportion="0.0">
+        <state line="259" column="43" selection-start="8518" selection-end="8525" vertical-scroll-proportion="-2.16">
           <folding>
             <element signature="e#94#175#0" expanded="false" />
             <element signature="e#179#297#0" expanded="false" />
             <element signature="e#1676#1870#0" expanded="false" />
             <element signature="e#1874#2848#0" expanded="false" />
-            <element signature="e#6620#7493#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/staging.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="60" selection-start="4760" selection-end="4760" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="31" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
+        <state line="137" column="31" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="31" selection-start="4718" selection-end="4718" vertical-scroll-proportion="0.48701298">
+        <state line="136" column="6" selection-start="4725" selection-end="4725" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="39" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.54545456">
           <folding />
         </state>
       </provider>

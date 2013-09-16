@@ -43,11 +43,13 @@ ECloudsV01::Application.configure do
   config.action_mailer.smtp_settings = {
       :address => ENV["SMTP_DEV"],
       :port => ENV["SMTP_PORT_DEV"],
-      :user_name => ENV["SMTP_USER_NAME_DEV"],
-      :password => ENV["SMTP_PASSWORD_DEV"],
+      :user_name => ENV["SENDGRID_USSERNAME"],
+      :password => ENV["SENDGRID_PASSWORD"],
       :authentication => 'plain',
+      :domain   => 'uniandes.edu.co',
       :enable_starttls_auto => true
   }
+
 
 
 end
