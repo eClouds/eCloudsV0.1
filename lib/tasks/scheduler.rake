@@ -557,7 +557,9 @@ def checkJobStatus (msg)
     @url = @file_url_parts[4] + '/'+ @file_url_parts[5]+ '/' + @file_url_parts[6]
     @cloud_file.url = @url
     @cloud_file.avatar = @file_name
-    @cloud_file.size = AWS::S3::S3Object.find(@file_name, @file_url_parts[3]).content-length
+
+    #TODO Esto se debe cambiar OJO.
+    @cloud_file.size = 0
     @cloud_file.save
 
     @msg.delete
