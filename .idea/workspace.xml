@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-4" afterPath="$PROJECT_DIR$/command-4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb" afterPath="$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb" />
     </list>
     <ignored path="eCloudsV0.1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +32,7 @@
     <file path="/_executions.html.erb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381475786718" ignored="false" />
     <file path="/cloud_file.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381872360926" ignored="false" />
     <file path="/prueba.rake" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381882118694" ignored="false" />
-    <file path="/20131017195526_modifiedlengthof_descriptionin_events.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382039828854" ignored="false" />
+    <file path="/20131017195526_modifiedlengthof_descriptionin_events.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382040101349" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,19 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130428213111_create_events.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130428213111_create_events.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="83" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="20131017195526_modifiedlengthof_descriptionin_events.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="34" selection-start="175" selection-end="175" vertical-scroll-proportion="0.41795665">
+            <state line="10" column="54" selection-start="187" selection-end="187" vertical-scroll-proportion="0.4347826">
               <folding />
             </state>
           </provider>
@@ -948,20 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="503" column="0" selection-start="12568" selection-end="12568" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130428213111_create_events.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="83" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130521013423_add_total_cost_to_execution_and_funds_to_user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -976,9 +953,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130428213111_create_events.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="83" selection-start="232" selection-end="232" vertical-scroll-proportion="0.4643963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="503" column="0" selection-start="12568" selection-end="12568" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="175" selection-end="175" vertical-scroll-proportion="0.41795665">
+        <state line="10" column="54" selection-start="187" selection-end="187" vertical-scroll-proportion="0.4347826">
           <folding />
         </state>
       </provider>

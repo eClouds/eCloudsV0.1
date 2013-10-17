@@ -6,6 +6,6 @@ class ModifiedlengthofDescriptioninEvents < ActiveRecord::Migration
   end
 
   def change
-     change_column :Event, :description, :limit => nil
+     change_column :events, :description, :text, :limit => nil
   end
 end
