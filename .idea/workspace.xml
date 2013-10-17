@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/static_pages/help.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/executions/_executions.html.erb" afterPath="$PROJECT_DIR$/app/views/executions/_executions.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/browser_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/browser_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/cloud_file.rb" afterPath="$PROJECT_DIR$/app/models/cloud_file.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/cloud_files_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/cloud_files_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-10" afterPath="$PROJECT_DIR$/command-10" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-11" afterPath="$PROJECT_DIR$/command-11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-12" afterPath="$PROJECT_DIR$/command-12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-13" afterPath="$PROJECT_DIR$/command-13" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-14" afterPath="$PROJECT_DIR$/command-14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-15" afterPath="$PROJECT_DIR$/command-15" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-16" afterPath="$PROJECT_DIR$/command-16" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-17" afterPath="$PROJECT_DIR$/command-17" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-18" afterPath="$PROJECT_DIR$/command-18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-19" afterPath="$PROJECT_DIR$/command-19" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-3" afterPath="$PROJECT_DIR$/command-3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-4" afterPath="$PROJECT_DIR$/command-4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-5" afterPath="$PROJECT_DIR$/command-5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-6" afterPath="$PROJECT_DIR$/command-6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-7" afterPath="$PROJECT_DIR$/command-7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-8" afterPath="$PROJECT_DIR$/command-8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-9" afterPath="$PROJECT_DIR$/command-9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/execution.rb" afterPath="$PROJECT_DIR$/app/models/execution.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/executions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/executions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/browser/index.html.erb" afterPath="$PROJECT_DIR$/app/views/browser/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/scheduler.rake" afterPath="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/staging.rb" afterPath="$PROJECT_DIR$/config/environments/staging.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/tasks/prueba.rake" afterPath="" />
     </list>
     <ignored path="eCloudsV0.1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,19 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scheduler.rake" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="scheduler.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="439" column="61" selection-start="11061" selection-end="11109" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="prueba.rake" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/prueba.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="189" selection-end="189" vertical-scroll-proportion="0.24523161">
+            <state line="439" column="61" selection-start="11061" selection-end="11109" vertical-scroll-proportion="0.7234042">
               <folding />
             </state>
           </provider>
@@ -776,11 +734,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4916986" sideWeight="0.6754658" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2706165" sideWeight="0.67096776" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2706165" sideWeight="0.67096776" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32419354" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -948,7 +906,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="439" column="61" selection-start="11061" selection-end="11109" vertical-scroll-proportion="0.0">
+        <state line="439" column="61" selection-start="11061" selection-end="11109" vertical-scroll-proportion="0.7234042">
           <folding />
         </state>
       </provider>
@@ -963,13 +921,6 @@
     <entry file="file://$PROJECT_DIR$/lib/tasks/agent.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="152" column="35" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/prueba.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="189" selection-end="189" vertical-scroll-proportion="0.24523161">
           <folding />
         </state>
       </provider>
