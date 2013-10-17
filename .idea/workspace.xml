@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/tasks/prueba.rake" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-4" afterPath="$PROJECT_DIR$/command-4" />
     </list>
     <ignored path="eCloudsV0.1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381881084270" ignored="false" />
+    <file path="/Dummy.txt" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382038864810" ignored="false" />
     <file path="/application.js" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1372868124825" ignored="false" />
     <file path="/a.dummy" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1377479763277" ignored="false" />
     <file path="/staging.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379370147399" ignored="false" />
@@ -32,6 +32,7 @@
     <file path="/_executions.html.erb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381475786718" ignored="false" />
     <file path="/cloud_file.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381872360926" ignored="false" />
     <file path="/prueba.rake" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381882118694" ignored="false" />
+    <file path="/20131017195526_modifiedlengthof_descriptionin_events.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382039828854" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +63,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scheduler.rake" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="scheduler.rake" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="439" column="61" selection-start="11061" selection-end="11109" vertical-scroll-proportion="0.7234042">
+            <state line="503" column="0" selection-start="12568" selection-end="12568" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130428213111_create_events.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130428213111_create_events.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="83" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131017195526_modifiedlengthof_descriptionin_events.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="34" selection-start="175" selection-end="175" vertical-scroll-proportion="0.41795665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130521013423_add_total_cost_to_execution_and_funds_to_user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130521013423_add_total_cost_to_execution_and_funds_to_user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/environments/staging.rb" />
         <option value="$PROJECT_DIR$/app/uploaders/avatar_uploader.rb" />
         <option value="$PROJECT_DIR$/app/views/browser/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
@@ -132,6 +159,7 @@
         <option value="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
         <option value="$PROJECT_DIR$/lib/tasks/prueba.rake" />
+        <option value="$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb" />
       </list>
     </option>
   </component>
@@ -203,7 +231,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,11 +245,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,6 +267,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eCloudsV0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
@@ -250,44 +296,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
-  <component name="RunManager" selected="Rake.prueba">
-    <configuration default="false" name="checkPreschedulingQueue" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
-      <module name="eCloudsV0.1" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="AMAZON_SECRET_ACCESS_KEY" value="HIR1coyt0rjGIlYnf6ALoYNOgakNaRXFKfHFnLOW" />
-        <env name="SCHEDULING_QUEUE" value="schedulingDevelopment" />
-        <env name="AMAZON_ACCESS_KEY_ID" value="AKIAI66WS2INNR3TRKUA" />
-        <env name="PRESCHEDULING_QUEUE" value="preSchedulingDevelopment" />
-        <env name="KEY_PAIR_NAME" value="eclouds" />
-        <env name="S3_BUCKET_DEV" value="Eclouds" />
-        <env name="S3_BUCKET_STAGING" value="EcloudsStaging" />
-        <env name="SECURITY_GROUP" value="Eclouds" />
-        <env name="S3_BUCKET_PROD" value="EcloudsProd" />
-        <env name="AMI_APP_CIENTIFICAS_NAME" value="ami-884c30e1" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="checkPreschedulingQueue" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="RAILS_ENV=development" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyDebugRunner" />
-      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Rake.checkPreschedulingQueue">
     <configuration default="false" name="scheduler" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="eCloudsV0.1" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -635,7 +644,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="prueba" type="RakeRunConfigurationType" factoryName="Rake">
+    <configuration default="false" name="checkPreschedulingQueue" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="eCloudsV0.1" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
@@ -643,8 +652,16 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
-        <env name="AMAZON_ACCESS_KEY_ID" value="AKIAI66WS2INNR3TRKUA" />
         <env name="AMAZON_SECRET_ACCESS_KEY" value="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" />
+        <env name="SCHEDULING_QUEUE" value="schedulingDevelopment" />
+        <env name="PRESCHEDULING_QUEUE" value="preSchedulingDevelopment" />
+        <env name="KEY_PAIR_NAME" value="eclouds" />
+        <env name="SECURITY_GROUP" value="Eclouds" />
+        <env name="AMI_APP_CIENTIFICAS_NAME" value="ami-884c30e1" />
+        <env name="S3_BUCKET_STAGING" value="EcloudsStaging" />
+        <env name="AMAZON_ACCESS_KEY_ID" value="AKIAI66WS2INNR3TRKUA" />
+        <env name="S3_BUCKET_PROD" value="EcloudsProd" />
+        <env name="S3_BUCKET_DEV" value="Eclouds" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" />
@@ -654,8 +671,8 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="prueba" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="RAILS_ENV=development" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="checkPreschedulingQueue" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="RAILS_ENV=staging" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
@@ -666,16 +683,50 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="checkPreschedulingQueue - Development" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="eCloudsV0.1" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="AMAZON_SECRET_ACCESS_KEY" value="HIR1coyt0rjGIlYnf6ALoYNOgakNaRXFKfHFnLOW" />
+        <env name="SCHEDULING_QUEUE" value="schedulingDevelopment" />
+        <env name="AMAZON_ACCESS_KEY_ID" value="AKIAI66WS2INNR3TRKUA" />
+        <env name="PRESCHEDULING_QUEUE" value="preSchedulingDevelopment" />
+        <env name="KEY_PAIR_NAME" value="eclouds" />
+        <env name="S3_BUCKET_DEV" value="Eclouds" />
+        <env name="S3_BUCKET_STAGING" value="EcloudsStaging" />
+        <env name="SECURITY_GROUP" value="Eclouds" />
+        <env name="S3_BUCKET_PROD" value="EcloudsProd" />
+        <env name="AMI_APP_CIENTIFICAS_NAME" value="ami-884c30e1" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="checkPreschedulingQueue" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="RAILS_ENV=development" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Rails.Debug" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.prueba" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.checkPreschedulingQueue" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.checkPreschedulingQueue" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.checkPreschedulingQueue - Development" />
       <item index="3" class="java.lang.String" itemvalue="Ruby.scheduler" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Rake.checkPreschedulingQueue" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.scheduler" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Ruby.scheduler" />
       </list>
     </recent_temporary>
   </component>
@@ -727,14 +778,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="24" width="1297" height="745" extended-state="7" />
-    <editor active="false" />
+    <frame x="64" y="24" width="1297" height="745" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4916986" sideWeight="0.6754658" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2706165" sideWeight="0.67096776" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2706165" sideWeight="0.67096776" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32419354" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -808,27 +859,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/applications_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="325" column="41" selection-start="9056" selection-end="9056" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="17" selection-start="3416" selection-end="3416" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="50" selection-start="134" selection-end="218" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/general.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.33333334">
@@ -904,13 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="439" column="61" selection-start="11061" selection-end="11109" vertical-scroll-proportion="0.7234042">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="8" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
@@ -921,6 +944,41 @@
     <entry file="file://$PROJECT_DIR$/lib/tasks/agent.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="152" column="35" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="503" column="0" selection-start="12568" selection-end="12568" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130428213111_create_events.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="83" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130521013423_add_total_cost_to_execution_and_funds_to_user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="34" selection-start="175" selection-end="175" vertical-scroll-proportion="0.41795665">
           <folding />
         </state>
       </provider>
