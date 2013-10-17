@@ -186,7 +186,7 @@ def checkForExecutions(msg)
 
     #debo identificar cuál es el directorio y su posición
     @input_dir = get_directory (@execution.inputs)
-
+    puts @execution.inputs
     # si no es nil es que hay directorio
     puts '@input_dir != nil'
     puts (@input_dir != nil).to_s
@@ -237,14 +237,35 @@ def checkForExecutions(msg)
 
         #obtengo el tamaño del array para sacar el ultimo
         @execution.inputs.pop
+        end
 
+    else
+     #En el caso que no se cuente con un directorio, sino un archivo
 
+      inputs_cloud_files = get_cloud_files(@execution.inputs)
+      puts '-----------------------'
+      puts 'antes de todo'
+      puts '-----------------------'
 
-
+      inputs_cloud_files.each do |cf_in|
+        puts '-----------------------'
+        puts cf_in.name.to_s
 
       end
 
+      puts '-----------------------'
+      puts 'antes de todo'
+      puts '-----------------------'
 
+      #para que no se vayan acumulando todos en cada iteración
+      all_inputs = @execution.inputs
+
+      #acá organizo todos los inputs que son archivos para que se metan al wget
+      inputs_cloud_files = get_cloud_files(@execution.inputs)
+      #inputs_cloud_files << @current_file
+
+      @job = create_job @cluster, inputs_cloud_files , all_inputs, @execution.base_command, @execution
+      @execution.inputs.pop
     end
 
     # ahpra pongo el mensaje en la cola para que lo terminen de organizar la ejecución
@@ -491,7 +512,7 @@ def checkJobStatus (msg)
     @job.save
     @msg.delete
 
-    @event = Event.new(:code => 6, :description => UPLOADING_OUTPUTS+@job.id, :event_date => Date.now)
+    @event = Event.new(:code => 6, :description => UPLOADING_OUTPUTS+@job.id.to_s, :event_date => DateTime.now)
     @event.execution = @job.execution
     @event.save
   end
@@ -536,12 +557,12 @@ def checkJobStatus (msg)
     @url = @file_url_parts[4] + '/'+ @file_url_parts[5]+ '/' + @file_url_parts[6]
     @cloud_file.url = @url
     @cloud_file.avatar = @file_name
-
+    @cloud_file.size = AWS::S3::S3Object.find(@file_name, @file_url_parts[3]).content-length
     @cloud_file.save
 
     @msg.delete
 
-    @event =  Event.new(:code => 7, :description => REGISTER_FILE+@cloud_file.name, :event_date => Date.now)
+    @event =  Event.new(:code => 7, :description => REGISTER_FILE+@cloud_file.name, :event_date => DateTime.now)
     @event.execution = @job.execution
     @event.save
   end
@@ -590,7 +611,7 @@ def checkJobStatus (msg)
         #si la ejecución terminó, apago todas las máquinas virtuales
     @virtual_machines.each do |vm|
 
-      stop_one_vm vm
+      stop_one_vm(vm,@execution.cluster.user)
 
       @execution_total_cost += vm.execution_hours*  VM_PRICING[vm.execution.vm_type]
 
@@ -701,7 +722,7 @@ def create_job cluster, cloud_file_inputs, all_inputs, base_command, execution
   @job.save
   @now = DateTime.now
 
-  @event = Event.new(:code => 2, :description => CREATED_JOB+@job.id, :event_date => @now)
+  @event = Event.new(:code => 2, :description => CREATED_JOB+@job.id.to_s, :event_date => @now)
   @event.execution = execution
   @event.save
 
@@ -786,7 +807,7 @@ def create_job cluster, cloud_file_inputs, all_inputs, base_command, execution
 
   end
 
-
+  puts @bucket.full_name
 
   # el permiso que toca ponerle es public-read
   @bucket.put('commands/' + f.path, f, {}, 'public-read')
@@ -856,7 +877,7 @@ def launch_one_vm(instance_type, cluster)
 
 end
 
-def stop_one_vm(vm)
+def stop_one_vm(vm, user)
 
   if !(vm.state == "stopped" or vm.state == "stopping")
 
@@ -870,7 +891,7 @@ def stop_one_vm(vm)
 
     @event.action = VIRTUAL_MACHINE_EVENTS[:STOPPED]
     @event.vm_id = vm.id
-    @event.user_id = current_user.id
+    @event.user_id = user.id
     @event.save
 
     @now = DateTime.now

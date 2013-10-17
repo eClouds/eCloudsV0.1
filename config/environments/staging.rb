@@ -128,16 +128,13 @@ ECloudsV01::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'stag-eclouds.herokuapp.com' }
 
-  #Adicion  # Authentication method changed: plain to login
-
   config.action_mailer.smtp_settings = {
       :address => ENV["SMTP_PROD"],
       :port => ENV["SMTP_PORT_PROD"],
-      :user_name => ENV["SENDGRID_USSERNAME"],
+      :user_name => ENV["SENDGRID_USERNAME"],
       :password => ENV["SENDGRID_PASSWORD"],
-      :authentication => 'plain',
-      :domain   => 'heroku.com',
-      :enable_starttls_auto => true
+      :authentication => :plain,
+      :domain   => 'heroku.com'
   }
 
 

@@ -86,10 +86,10 @@ class CloudFilesController < ApplicationController
     puts @cloud_file.attributes
 
     @cloud_file.url =@cloud_file.avatar.store_dir.to_s
-
+    puts @cloud_file.url
     @cloud_file.name = @cloud_file.avatar.filename.to_s
-
     @cloud_file.size = @cloud_file.avatar.file.size
+
 
     #@upload = params["file_up" ]
     #puts @upload
@@ -104,7 +104,7 @@ class CloudFilesController < ApplicationController
     if @cloud_file.save
 
       @cloud_file.url = @cloud_file.url + @cloud_file.id.to_s + "/" + @cloud_file.name
-
+     puts  @cloud_file.url
 
 
       @cloud_file.save

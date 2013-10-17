@@ -58,6 +58,7 @@
         <td><li class="icon-file"></td>
         <td><%= cloud_file.name %></td>
         <td><%= number_to_human_size cloud_file.size %></td>
+        <td><%= cloud_file.updated_at  %></td>
         <td><a href="<%= cloud_file.complete_url %>">Download</a></td>
         <td><%= link_to "Delete" , cloud_file, :confirm => 'Are you sure?', :method => :delete%></td>
 

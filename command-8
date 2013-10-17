@@ -1,9 +1,5 @@
-wget https://s3.amazonaws.com/EcloudsStaginguploads/cloud_file/avatar/4/todo
-wget https://s3.amazonaws.com/EcloudsStaginguploads/cloud_file/avatar/5/Maxent2.R
-wget https://s3.amazonaws.com/EcloudsStaginguploads/cloud_file/avatar/6/Atelopus_nicefori
-wget https://s3.amazonaws.com/EcloudsStaginguploads/cloud_file/avatar/6/Atelopus_nicefori
-wget https://s3.amazonaws.com/EcloudsStaginguploads/cloud_file/avatar/6/Atelopus_nicefori
-wget https://s3.amazonaws.com/EcloudsStaginguploads/cloud_file/avatar/6/Atelopus_nicefori
-wget https://s3.amazonaws.com/EcloudsStaginguploads/cloud_file/avatar/6/Atelopus_nicefori
-wget https://s3.amazonaws.com/eclouds/testFiles/Maxent2.R
-R --no-save   Atelopus_nicefori  $HOME  Atelopus_nicefori  todo < Maxent2.R
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/9/stack
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/8/Maxent2.R
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/11/Atelopus_nicefori
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/11/Atelopus_nicefori
+R --no-save   Atelopus_nicefori  Atelopus_nicefori  stack < Maxent2.R 2>> jobsOutputs/errors.txt

@@ -47,7 +47,7 @@ class BrowserController < ApplicationController
     session[:current_dir_session] = nil
 
     if user_signed_in?
-      #show only root folders (which have no parent folders)
+      #show only root folders (which have no parent folders)  para los directorios publicos +Directory.find_all_by_is_public(true)
       @directories = current_user.directories.roots
 
       #show only root files which has no "folder_id"

@@ -21,12 +21,12 @@ class StaticPagesController < ApplicationController
       @fileSize=0
       @cloud_files =  current_user.cloud_files
       @cloud_files.each do |file|
-        @fileSize += file.size
+      @fileSize += file.size
       end
       @directories.each do |direc|
         @cloud_files =  direc.cloud_files
         @cloud_files.each do |file|
-          @fileSize += file.size
+        @fileSize += file.size
         end
       end
 

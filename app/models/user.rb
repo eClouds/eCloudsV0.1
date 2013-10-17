@@ -27,6 +27,8 @@ class User < ActiveRecord::Base
 
   has_many :jobs
 
+  before_create { self.funds=100 }
+
   def to_s
     email
   end
@@ -46,7 +48,6 @@ class User < ActiveRecord::Base
   def set_approved
     if !approved?
       self.toggle!(:approved)
-      self.funds= 100;
     end
   end
 

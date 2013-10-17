@@ -79,7 +79,7 @@ class ExecutionsController < InheritedResources::Base
 
     respond_to do |format|
       if @execution.save
-        format.html { redirect_to @execution, notice: 'Your execution is being launched' }
+        format.html { redirect_to executions_path, notice: 'Your execution is being launched' }
         format.json { render json: @execution, status: :created, location: @execution}
       else
         format.html { render action: "new" }
@@ -154,6 +154,9 @@ class ExecutionsController < InheritedResources::Base
     #Se crea un directorio llamado demo_executions y se asigna
     @output_dir = current_user.directories.new
     @output_dir.name = "DemoExec"+@now.to_default_s
+    #Se busca el directorio Demo Results
+    @demo_dir = Directory.where("user_id=? AND name=?",current_user.id,"Demo Results")[0]
+    @output_dir.parent_id = @demo_dir.id
     @output_dir.save
     @execution.directory =  @output_dir
 

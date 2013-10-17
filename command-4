@@ -1,0 +1,4 @@
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/6/pgadmin.log
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/6/pgadmin.log
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/1/InstitutoHumboldt_0.jpg
+R --no-save   InstitutoHumboldt_0.jpg  Atelopus_nicefori  pgadmin.log < pgadmin.log 2>> jobsOutputs/errors.txt
