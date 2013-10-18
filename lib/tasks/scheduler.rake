@@ -623,6 +623,7 @@ def checkJobStatus (msg)
     #le pongo que la fecha de finalización es ahora
     @end_date = DateTime.now
     @execution.end_date = @end_date
+    @execution.save
 
 
 

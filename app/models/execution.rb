@@ -17,14 +17,18 @@ class Execution < ActiveRecord::Base
 
 
   def completed?
-    self.ended?
+    self.directory_id.nil?
   end
 
   def launched?
-    self.start_date.nil?
+    self.start_date.nil? && !self.ended?
   end
 
   def ended?
-    !self.end_date.nil?
+    if self.ended == true
+       true
+    else
+      false
+    end
   end
 end

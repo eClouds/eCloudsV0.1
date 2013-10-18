@@ -36,8 +36,14 @@
               <%= link_to 'Launch', define_execution_part2_path(execution), :class => "btn btn-large btn-warning btn-block" %>
 
           <% elsif execution.ended? %>
-              <td></td>
-          <% else %>
+                  <%= link_to 'Ended', browse_path(execution.directory_id), :class => "btn btn-large btn-success btn-block" %>
+                  <% if !execution.end_date.nil? %>
+                      <% t=execution.end_date  %>
+
+                      <%= "Ended at: "+ t.strftime("%d") +"/"+ t.strftime("%B") +"/"+ t.strftime("%Y") +" at "+ t.strftime("%X")    %>
+
+                  <%end%>
+            <% else %>
               <%= link_to 'Running', edit_execution_path(execution), :class => "btn btn-large btn-info btn-block" %>
                   <% if !execution.start_date.nil? %>
                      <% t=execution.start_date  %>
