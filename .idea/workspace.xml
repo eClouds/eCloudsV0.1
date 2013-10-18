@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-5" afterPath="$PROJECT_DIR$/command-5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-6" afterPath="$PROJECT_DIR$/command-6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-7" afterPath="$PROJECT_DIR$/command-7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-8" afterPath="$PROJECT_DIR$/command-8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/execution.rb" afterPath="$PROJECT_DIR$/app/models/execution.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/scheduler.rake" afterPath="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
-    </list>
+    <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="" />
     <ignored path="eCloudsV0.1.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382038864810" ignored="false" />
