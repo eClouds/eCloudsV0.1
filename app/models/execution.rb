@@ -17,7 +17,7 @@ class Execution < ActiveRecord::Base
 
 
   def completed?
-    self.directory_id.nil?
+    self.ended?
   end
 
   def launched?

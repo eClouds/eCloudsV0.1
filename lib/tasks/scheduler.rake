@@ -580,9 +580,9 @@ def checkJobStatus (msg)
     @execution = @job.execution
     @execution.running_jobs = @execution.running_jobs-1
     @execution.finished_jobs = @execution.finished_jobs+1
-    # si el número de jobs corriendo es el mismo que el numero de jobs que tocaba ejecutar
-    # la ejecución se considera terminada
-    if @execution.running_jobs == @execution.finished_jobs
+    # si el número de jobs es 0 quiere decir que no hay jobs corriendo en este momento
+    # esto quiere decir que la ejecución se ha terminado
+    if @execution.running_jobs == 0
       @execution.ended = true
     end
 
@@ -615,7 +615,8 @@ def checkJobStatus (msg)
 
       stop_one_vm(vm,@execution.cluster.user)
 
-      @execution_total_cost += vm.execution_hours*  VM_PRICING[vm.execution.vm_type]
+      #@execution_total_cost += vm.execution_hours*  VM_PRICING[vm.execution.vm_type]
+      @execution_total_cost += vm.execution_hours * VM_PRICING[@execution.vm_type]
 
     end
 
@@ -625,7 +626,7 @@ def checkJobStatus (msg)
 
 
 
-    @event = Event.new(:code => 10, :description => EXECUTION_FINISHED+@execution.id, :event_date => @end_date)
+    @event = Event.new(:code => 10, :description => EXECUTION_FINISHED+@execution.id.to_s, :event_date => @end_date)
     @event.execution = @execution
     @event.save
 
@@ -902,7 +903,7 @@ def stop_one_vm(vm, user)
     @exec_event.save
 
     @start_event = Event.where("execution_id=? and code=?", @exec_event.execution_id, 1)
-    @date_diff =  ((@start_event.event_date.to_i - @exec_event.event_date.to_i)/3600).ceil
+    @date_diff =  ((@exec_event.event_date.to_i - @start_event.first.event_date.to_i )/3600).ceil
     vm.execution_hours = @date_diff
     vm.save
   end

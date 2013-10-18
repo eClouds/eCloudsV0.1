@@ -1,4 +1,2 @@
-wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/9/stack
-wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/8/Maxent2.R
-wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/11/Atelopus_nicefori
-R --no-save   Atelopus_nicefori  Atelopus_nicefori  stack < Maxent2.R 2>> jobsOutputs/errors.txt
+wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/12/HumanGeneforboneglaProtein.fasta
+./command-blastn   HumanGeneforboneglaProtein.fasta  blastn-out.txt 2>> jobsOutputs/errors.txt

@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-5" afterPath="$PROJECT_DIR$/command-5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-6" afterPath="$PROJECT_DIR$/command-6" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-7" afterPath="$PROJECT_DIR$/command-7" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-8" afterPath="$PROJECT_DIR$/command-8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/execution.rb" afterPath="$PROJECT_DIR$/app/models/execution.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/scheduler.rake" afterPath="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
     </list>
     <ignored path="eCloudsV0.1.iws" />
@@ -22,12 +27,12 @@
     <file path="/input.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1379229304224" ignored="false" />
     <file path="/devise.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1380008918279" ignored="false" />
     <file path="/smtp.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1380010177900" ignored="false" />
-    <file path="/scheduler.rake" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382040344640" ignored="false" />
+    <file path="/scheduler.rake" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382117033300" ignored="false" />
     <file path="/cloud_files_controller.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381872420547" ignored="false" />
     <file path="/index.html.erb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381361979799" ignored="false" />
     <file path="/browser_controller.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381470722805" ignored="false" />
     <file path="/static_pages_controller.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381471307746" ignored="false" />
-    <file path="/execution.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381471475686" ignored="false" />
+    <file path="/execution.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1382117059742" ignored="false" />
     <file path="/registrations_controller.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381471928858" ignored="false" />
     <file path="/_executions.html.erb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381475786718" ignored="false" />
     <file path="/cloud_file.rb" changelist="aa64623f-308a-487f-8029-024e07db3209" time="1381872360926" ignored="false" />
@@ -54,64 +59,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="static_pages_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scheduler.rake" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="scheduler.rake" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="560" column="32" selection-start="14140" selection-end="14140" vertical-scroll-proportion="0.37650603">
+            <state line="593" column="10" selection-start="15099" selection-end="15099" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20131017195526_modifiedlengthof_descriptionin_events.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb">
+      <file leaf-file-name="execution.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/execution.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="54" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130521013423_add_total_cost_to_execution_and_funds_to_user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130521013423_add_total_cost_to_execution_and_funds_to_user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloud_files_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/cloud_files_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="29" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agent.rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/agent.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="35" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloud_file.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/cloud_file.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="13" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+            <state line="15" column="25" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.4787234">
               <folding />
             </state>
           </provider>
@@ -140,7 +100,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/browser_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/execution.rb" />
         <option value="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/executions_controller.rb" />
@@ -151,6 +110,7 @@
         <option value="$PROJECT_DIR$/lib/tasks/prueba.rake" />
         <option value="$PROJECT_DIR$/db/migrate/20131017195526_modifiedlengthof_descriptionin_events.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
+        <option value="$PROJECT_DIR$/app/models/execution.rb" />
       </list>
     </option>
   </component>
@@ -209,38 +169,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="eCloudsV0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eCloudsV0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eCloudsV0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eCloudsV0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eCloudsV0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -850,27 +778,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/general.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/execution.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/executions/_executions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="24" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.6306306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/directory.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -904,13 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/cloud_file.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/uploaders/avatar_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.581081">
@@ -918,35 +818,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/cloud_files_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="29" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/agent.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="35" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130521013423_add_total_cost_to_execution_and_funds_to_user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -967,9 +839,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cloud_file.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="8" selection-start="831" selection-end="831" vertical-scroll-proportion="0.36702126">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="43" selection-start="73" selection-end="83" vertical-scroll-proportion="0.038560413">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cloud_files_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="29" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-2.0385604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/agent.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="35" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.53984576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="4" selection-start="4276" selection-end="4276" vertical-scroll-proportion="0.3324468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/virtual_machine.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="560" column="32" selection-start="14140" selection-end="14140" vertical-scroll-proportion="0.37650603">
+        <state line="593" column="10" selection-start="15099" selection-end="15099" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/execution.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.4787234">
           <folding />
         </state>
       </provider>
