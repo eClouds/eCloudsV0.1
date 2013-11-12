@@ -617,7 +617,6 @@ def checkJobStatus (msg)
 
       #@execution_total_cost += vm.execution_hours*  VM_PRICING[vm.execution.vm_type]
       @execution_total_cost += vm.execution_hours * VM_PRICING[@execution.vm_type]
-
     end
 
     #le pongo que la fecha de finalización es ahora
@@ -630,7 +629,6 @@ def checkJobStatus (msg)
     @event = Event.new(:code => 10, :description => EXECUTION_FINISHED+@execution.id.to_s, :event_date => @end_date)
     @event.execution = @execution
     @event.save
-
 
   end
 
@@ -904,7 +902,7 @@ def stop_one_vm(vm, user)
     @exec_event.save
 
     @start_event = Event.where("execution_id=? and code=?", @exec_event.execution_id, 1)
-    @date_diff =  ((@exec_event.event_date.to_i - @start_event.first.event_date.to_i )/3600).ceil
+    @date_diff =  ((@exec_event.event_date.to_i - @start_event.first.event_date.to_i)/3600).ceil
     vm.execution_hours = @date_diff
     vm.save
   end

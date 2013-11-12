@@ -1,2 +1,5 @@
-wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/12/HumanGeneforboneglaProtein.fasta
-./command-blastn   HumanGeneforboneglaProtein.fasta  out-blastn.txt 2>> jobsOutputs/errors.txt
+wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
+wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
+wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
+wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
+./command-blastp   Hv_proteins_final.fasta  HvsatatrixvsRefSeq.bp 2>> jobsOutputs/errors.txt
