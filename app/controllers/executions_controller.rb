@@ -49,7 +49,7 @@ class ExecutionsController < InheritedResources::Base
   end
 
   def compute_total_hours (exec)
-    @vms = VirtualMachine.find_all_by_cluster_id(hexec.cluster_id)
+    @vms = VirtualMachine.find_all_by_cluster_id(exec.cluster_id)
     @hours = 0
     @vms.each do |vm|
       @hours += vm.execution_hours
@@ -60,33 +60,41 @@ class ExecutionsController < InheritedResources::Base
   def launch_execution
     @execution = Execution.find(params[:id])
 
-    @execution.user = current_user
+    if calculateRemainingFunds(current_user) - @execution.total_estimated_cost > 0
 
-    @now = DateTime.now
+      @execution.user = current_user
 
-    @execution.start_date = @now
+      @now = DateTime.now
 
-    #acá pongo el mensaje en la cola
-    @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-    @queue = @sqs.queue(PRESCHEDULING_QUEUE, false )
+      @execution.start_date = @now
 
-    @msg = PROCESS_EXECUTION_MSG + ':' + @execution.id.to_s
-    @queue.send_message(@msg)
+      #acá pongo el mensaje en la cola
+      @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
+      @queue = @sqs.queue(PRESCHEDULING_QUEUE, false )
 
-    @event = Event.new(:code => 0, :description => EXECUTION_LAUNCHED+@execution.id.to_s, :event_date => @now)
-    @event.execution = @execution
-    @event.save
+      @msg = PROCESS_EXECUTION_MSG + ':' + @execution.id.to_s
+      @queue.send_message(@msg)
 
-    respond_to do |format|
-      if @execution.save
-        format.html { redirect_to executions_path, notice: 'Your execution is being launched' }
-        format.json { render json: @execution, status: :created, location: @execution}
-      else
-        format.html { render action: "new" }
-        format.json { render json: @execution.errors, status: :unprocessable_entity }
+      @event = Event.new(:code => 0, :description => EXECUTION_LAUNCHED+@execution.id.to_s, :event_date => @now)
+      @event.execution = @execution
+      @event.save
+
+      respond_to do |format|
+        if @execution.save
+          format.html { redirect_to executions_path, notice: 'Your execution is being launched' }
+          format.json { render json: @execution, status: :created, location: @execution}
+        else
+          format.html { render action: "new" }
+          format.json { render json: @execution.errors, status: :unprocessable_entity }
+        end
       end
     end
-
+  else
+    respond_to do |format|
+      format.html { render action: "define_execution_part2" }
+      @execution.errors.add(:total_estimated_cost,': Not Enough remaining funds to launch execution')
+      format.json { render json: @execution.errors, status: :unprocessable_entity }
+    end
   end
 
   def demo_execution
@@ -328,6 +336,23 @@ class ExecutionsController < InheritedResources::Base
 
             end
 
+          elsif app_input.is_selecteditem
+
+            @input_value = @raw_input
+            puts "------------------------------------ " + @raw_input.to_s
+            puts @raw_inputs
+            @execution_input.value = @input_value
+
+            if @execution_input.prefix != nil or @execution_input.prefix != ''
+
+              @example_command = @example_command +'{'+@execution_input.prefix + ' '+ @execution_input.value+'}'+ ' '
+
+            else
+              @example_command = @example_command + '{'+ @execution_input.value+'}' + ' '
+
+            end
+
+
           else
             @input_value = @raw_input
             @execution_input.value = @input_value
@@ -438,6 +463,41 @@ class ExecutionsController < InheritedResources::Base
   end
 
 
+  def calculateRemainingFunds(current_user)
+    @date = Date.today
+    @executions2 = Execution.where("end_date IS NOT NULL and start_date IS NOT NULL and start_date >= ?", @date) #and start_date > "+@date.to_s)
+    @directories = current_user.directories
+    @fileSize=0
+    @cloud_files =  current_user.cloud_files
+    @cloud_files.each do |file|
+      @fileSize += file.size
+    end
+
+    @periodTotal = 0
+    @computingTotal = 0
+                                                                                                                 #Se calcula el costo total de las horas de computo
+    @executions2.each do |exec|
+      @computingTotal += exec.total_cost
+    end
+                                                                                                                 #Se suma al total del periodo el total por horas de computo
+    @periodTotal += @computingTotal
+
+
+    @directories.each do |direc|
+      @cloud_files =  direc.cloud_files
+      @cloud_files.each do |file|
+        @fileSize += file.size
+      end
+    end
+
+    #Se calcula el costo total por almacenamiento, se divide por el numero de bytes en un GB y se aproxima
+    @moduli = (@fileSize%1000000000 == 0) ? 0:1
+    @filesTotal = S3_PRICING["first-TB per GB"]*((@fileSize/1000000000)+@moduli)
+
+    @periodTotal += @filesTotal
+    return current_user.funds - @periodTotal
+
+  end
 
 
 end

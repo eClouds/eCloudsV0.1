@@ -6,7 +6,7 @@
           <h2><%= pluralize(@execution.errors.count, "error") %> prohibited this application from being saved:</h2>
 
           <ul>
-            <% execution.errors.full_messages.each do |msg| %>
+            <% @execution.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
             <% end %>
           </ul>
@@ -41,20 +41,28 @@
       <table class="table table-striped">
         <tr>
           <th>Instance Type</th>
-          <th>Description</th>
+          <th>RAM</th>
+          <th>vCPU</th>
+          <th><a><span title="EC2 Compute Unit (ECU) – One EC2 Compute Unit (ECU) provides the equivalent CPU capacity of a 1.0-1.2 GHz 2007 Opteron or 2007 Xeon processor.">ECU*</span></a></th>
+          <th>IO</th>
+          <th>Cost/Hour</th>
           <th></th>
         </tr>
 
-        <% descriptions   = ['613 Mb Memory, Up to 2 compute units, IO Performance: Low ',
-                             '1.7 Gb Memory, 1 compute units, IO Performance: Moderate ',
-                             '3.75 Gb Memory, 2 compute units, IO Performance: Moderate',
-                             '7.5 Gb Memory, 4 compute units, IO Performance: Moderate',
-                             '15 Gb Memory, 8 compute units, IO Performance: High',
-                             '7 Gb Memory, 20 compute units, IO Performance: High'] %>
+        <% descriptions   = [['0,598','1','up to 2','Low','$0'],
+                             ['1,7 ','1','1','Moderate','$0,06'],
+                             ['3.75','1','2','Moderate','$0,120'],
+                             ['7,5','2','4','Moderate','$0,240'],
+                             ['15','4','8','High','$0,480'],
+                             ['7','8','20','High','$0,580']] %>
     <% Aws::Ec2::INSTANCE_TYPES.each_with_index do |type, index|%>
           <tr>
             <td><%= type %></td>
-            <td><%= descriptions[index] %></td>
+            <td><%= descriptions[index][0] %></td>
+            <td><%= descriptions[index][1] %></td>
+            <td><%= descriptions[index][2] %></td>
+            <td><%= descriptions[index][3] %></td>
+            <td><%= descriptions[index][4] %></td>
             <td><%= radio_button(:execution_params, :instance_type, type, :checked => (type == @execution.vm_type)) %></td>
           </tr>
 

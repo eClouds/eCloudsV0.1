@@ -559,7 +559,7 @@ def checkJobStatus (msg)
     @cloud_file.avatar = @file_name
 
     #TODO Esto se debe cambiar OJO.
-    @cloud_file.size = 0
+    @cloud_file.size = get_object_size_s3(@url)
     @cloud_file.save
 
     @msg.delete
@@ -905,6 +905,15 @@ def stop_one_vm(vm, user)
     @date_diff =  ((@exec_event.event_date.to_i - @start_event.first.event_date.to_i)/3600).ceil
     vm.execution_hours = @date_diff
     vm.save
+  end
+
+  def get_object_size_s3(url)
+    require 'net/http'
+
+    http = Net::HTTP.start('s3.amazonaws.com')
+    resp = http.head('/'+url)
+    http.finish
+    return Integer(resp['content-length'])
   end
 
 end

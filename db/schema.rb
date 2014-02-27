@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131017195526) do
+ActiveRecord::Schema.define(:version => 20140226214612) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -149,13 +149,14 @@ ActiveRecord::Schema.define(:version => 20131017195526) do
     t.integer  "cloud_file_id"
     t.integer  "directory_id"
     t.string   "description"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "application_id"
     t.string   "prefix"
     t.integer  "position"
     t.integer  "execution_id"
     t.boolean  "visible"
+    t.boolean  "is_selecteditem"
   end
 
   create_table "instance_types", :force => true do |t|
@@ -195,6 +196,14 @@ ActiveRecord::Schema.define(:version => 20131017195526) do
     t.integer  "application_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "selected_items", :force => true do |t|
+    t.string   "name"
+    t.string   "value"
+    t.integer  "input_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
