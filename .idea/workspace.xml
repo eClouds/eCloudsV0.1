@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa64623f-308a-487f-8029-024e07db3209" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/executions/_executions.html.erb" afterPath="$PROJECT_DIR$/app/views/executions/_executions.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-20" afterPath="$PROJECT_DIR$/command-20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-21" afterPath="$PROJECT_DIR$/command-21" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command-22" afterPath="$PROJECT_DIR$/command-22" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/executions/define_execution.html.erb" afterPath="$PROJECT_DIR$/app/views/executions/define_execution.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/executions/define_execution_part2.html.erb" afterPath="$PROJECT_DIR$/app/views/executions/define_execution_part2.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/executions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/executions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/input.rb" afterPath="$PROJECT_DIR$/app/models/input.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/scheduler.rake" afterPath="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eCloudsV0.1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,7 +74,7 @@
       <file leaf-file-name="executions_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/executions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="99" selection-start="3173" selection-end="3173" vertical-scroll-proportion="-6.540616">
+            <state line="474" column="2" selection-start="15855" selection-end="15855" vertical-scroll-proportion="0.6022409">
               <folding>
                 <element signature="e#7217#8090#0" expanded="false" />
                 <element signature="e#8094#8387#0" expanded="false" />
@@ -990,7 +980,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/executions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="99" selection-start="3173" selection-end="3173" vertical-scroll-proportion="-6.540616">
+        <state line="474" column="2" selection-start="15855" selection-end="15855" vertical-scroll-proportion="0.6022409">
           <folding>
             <element signature="e#7217#8090#0" expanded="false" />
             <element signature="e#8094#8387#0" expanded="false" />

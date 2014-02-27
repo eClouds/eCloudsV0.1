@@ -472,7 +472,6 @@ class ExecutionsController < InheritedResources::Base
     @cloud_files.each do |file|
       @fileSize += file.size
     end
-
     @periodTotal = 0
     @computingTotal = 0
                                                                                                                  #Se calcula el costo total de las horas de computo
