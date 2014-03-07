@@ -1,0 +1,2 @@
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/21/HumanGeneforboneglaProtein.fasta
+./command-blastn   HumanGeneforboneglaProtein.fasta  env_nt.gz 2>> jobsOutputs/errors.txt

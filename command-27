@@ -1,0 +1,4 @@
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/21/HumanGeneforboneglaProtein.fasta
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/22/proteinsequence.fasta
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/22/proteinsequence.fasta
+./command-blastn   HumanGeneforboneglaProtein.fasta  drosoph.aa.gz 2>> jobsOutputs/errors.txt

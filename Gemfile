@@ -8,27 +8,27 @@ gem 'devise' , '2.1.2'
 
 gem 'aws'   , '2.5.7'
 
-gem 'carrierwave_direct'
+gem 'carrierwave_direct'  , '0.0.7'
 
 gem 'fog' , '1.5.0'
 
 gem 'carrierwave' , '0.6.2'
 
-gem "acts_as_tree"
+gem "acts_as_tree" , '1.2.0'
 
-gem 'activeadmin'
+gem 'activeadmin'  , '0.5.0'
 
 gem 'meta_search' , '>= 1.1.0.pre'
 
 gem 'pg', '0.12.2'
 
-gem 'formtastic'
+gem 'formtastic' , '2.2.1'
 
 gem 'json', '1.7.7'
 
-gem 'rmagick'
+gem 'rmagick' , '2.13.2'
 
-gem 'bootswatch-rails'
+gem 'bootswatch-rails' , '0.4.0'
 
 # Bundl<e edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

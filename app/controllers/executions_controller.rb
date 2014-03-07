@@ -88,13 +88,13 @@ class ExecutionsController < InheritedResources::Base
           format.json { render json: @execution.errors, status: :unprocessable_entity }
         end
       end
-    end
   else
     respond_to do |format|
       format.html { render action: "define_execution_part2" }
       @execution.errors.add(:total_estimated_cost,': Not Enough remaining funds to launch execution')
       format.json { render json: @execution.errors, status: :unprocessable_entity }
     end
+  end
   end
 
   def demo_execution
@@ -140,7 +140,6 @@ class ExecutionsController < InheritedResources::Base
         else
           @example_command = @example_command +'{'+ @execution_input.value+'}'+' '
         end
-
       else
 
         if @execution_input.prefix != nil or @execution_input.prefix != ''

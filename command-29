@@ -1,0 +1,2 @@
+wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/22/proteinsequence.fasta
+./command-blastn   proteinsequence.fasta  est_human.gz 2>> jobsOutputs/errors.txt
