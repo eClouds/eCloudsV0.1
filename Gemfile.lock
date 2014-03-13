@@ -202,7 +202,7 @@ DEPENDENCIES
   activeadmin
   acts_as_tree
   aws (= 2.5.7)
-  bootstrap-sass (= 2.0.0)
+  bootstrap-sass
   bootswatch-rails
   carrierwave (= 0.6.2)
   carrierwave_direct
