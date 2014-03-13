@@ -559,7 +559,7 @@ def checkJobStatus (msg)
     @cloud_file.avatar = @file_name
 
     #TODO Esto se debe cambiar OJO.
-    @cloud_file.size = get_object_size_s3(@url)
+    @cloud_file.size = get_object_size_s3 (@file_url_parts[3]+"/"+@cloud_file.url)
     @cloud_file.save
 
     @msg.delete
@@ -907,13 +907,13 @@ def stop_one_vm(vm, user)
     vm.save
   end
 
-  def get_object_size_s3(url)
-    require 'net/http'
+end
 
-    http = Net::HTTP.start('s3.amazonaws.com')
-    resp = http.head('/'+url)
-    http.finish
-    return Integer(resp['content-length'])
-  end
-
+def get_object_size_s3 (url)
+  require 'net/http'
+  puts "ESTA es la URL "+ url
+  http = Net::HTTP.start('s3.amazonaws.com')
+  resp = http.head('/'+url)
+  http.finish
+  return Integer(resp['content-length'])
 end
