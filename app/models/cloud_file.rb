@@ -19,6 +19,8 @@ class CloudFile < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  default_scope order('updated_at desc')
+
   def avatar=(obj)
     super(obj)
     # Put your callbacks here, e.g.

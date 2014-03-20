@@ -232,6 +232,11 @@ class ExecutionsController < InheritedResources::Base
 
     @cloud_files = current_user.cloud_files.all+CloudFile.find_all_by_user_id(0)
     @directories = current_user.directories.all+Directory.find_all_by_is_public(true)
+
+    if @execution.inputs.size>0
+      @execution.inputs.delete_all
+    end
+
   end
 
   def new

@@ -8,5 +8,7 @@ class Directory < ActiveRecord::Base
   has_many :cloud_files, :dependent => :destroy
   has_many :jobs
   has_many :executions
+
+  default_scope order('updated_at desc')
   
 end
