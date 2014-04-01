@@ -18,13 +18,12 @@ task :checkJobsQueue => :environment do
 
     puts 'I will check the queue for messages'
     puts 'using queue: '+ @queue_name
-    @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-    @queue = @sqs.queue(@queue_name,false )
+    @queueOps= QueueOperations.new
+    @queue= @queueOps.getQueue(@queue_name )
 
     puts 'I will check the queue for messages'
 
-    @msg = @queue.receive
-
+    @msg = @queueOps.receiveMessage(@queue)
 
     puts 'I just received the message: '
     puts @msg
@@ -55,7 +54,7 @@ task :checkJobsQueue => :environment do
 
         # my queue for moniroring will be the same as for prescheduling
 
-        @queue_monitoring = @sqs.queue(PRESCHEDULING_QUEUE,false )
+        @queue_monitoring = @queueOps.getQueue(PRESCHEDULING_QUEUE)
 
         puts 'All the monitoring messages will me sent to '
         puts @queue_monitoring
@@ -66,7 +65,7 @@ task :checkJobsQueue => :environment do
         @installation_file_name = @app_installer_url.split('/').last
 
         @installing_msg = INSTALLING_APP_MSG+';'+ @msg_parts[1].to_s
-        @queue_monitoring.send_message(@installing_msg)
+        @queueOps.sendMessage(@queue_monitoring,@installing_msg)
 
         puts 'Creating output dir'
         system( 'mkdir jobsOutputs')
@@ -110,7 +109,7 @@ task :checkJobsQueue => :environment do
         system('wget ' + @command_url )
 
         @running_msg = RUNNING_APP_MSG+';'+ @msg_parts[1].to_s+';'+@host
-        @queue_monitoring.send_message(@running_msg)
+        @queueOps.sendMessage(@queue_monitoring,@running_msg)
 
         @command_file_name = @command_url.split('/').last
 
@@ -125,7 +124,7 @@ task :checkJobsQueue => :environment do
         puts 'I will upload the outputs'
 
         @uploading_outs_msg = UPLOADING_OUTPUTS_MSG+';'+ @msg_parts[1].to_s
-        @queue_monitoring.send_message(@uploading_outs_msg)
+        @queueOps.sendMessage(@queue_monitoring,@uploading_outs_msg)
 
         @outputFiles = Dir['jobsOutputs/*']
 
@@ -152,7 +151,7 @@ task :checkJobsQueue => :environment do
           puts 'successfully uploaded command file to ' + @fileUrl
 
           @registerFile = REGISTER_FILE_MSG+';'+ @msg_parts[1].to_s+';'+@fileUrl
-          @queue_monitoring.send_message(@registerFile)
+          @queueOps.sendMessage(@queue_monitoring,@registerFile)
 
           File.delete(@file)
 
@@ -163,7 +162,7 @@ task :checkJobsQueue => :environment do
 
 
         @finished_job_msg = FINISHED_JOB_MSG+';'+ @msg_parts[1].to_s+';'+@host
-        @queue_monitoring.send_message(@finished_job_msg)
+        @queueOps.sendMessage(@queue_monitoring,@finished_job_msg)
 
         puts 'I will delete the file that represents that I am busy'
 
@@ -211,10 +210,10 @@ task :getAssignedQueue => :environment do
 
     puts 'I wil check the queue to see which queue I have to use'
 
-    @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-    @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
+    @queueOps= QueueOperations.new
+    @queue = @sqs.getQueue(PRESCHEDULING_QUEUE)
 
-    @msg = @queue.receive
+    @msg = @queueOps.receiveMessage(@queue)
 
     puts 'I just received the message:'
     puts @msg
@@ -254,7 +253,7 @@ task :getAssignedQueue => :environment do
         @msg.delete
 
         @message = SWITCHED_TO_QUEUE + ";"+@exec_queue_name
-        @queue.send_message(@message)
+        @queueOps.sendMessage(@queue,@message)
 
       end
     end

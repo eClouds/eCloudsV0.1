@@ -49,10 +49,10 @@ class JobsController < InheritedResources::Base
       if @job.save
 
         # ahora voy a poner el job en la cola de prescheduling
-        @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-        @queue = @sqs.queue(PRESCHEDULING_QUEUE)
+        @queueOps= QueueOperations.new
+        @queue = @queueOps.getQueue(PRESCHEDULING_QUEUE)
         @msg = SCHEDULE_JOB_MSG + ':' + @job.id.to_s
-        @queue.send_message(@msg)
+        @queueOps.sendMessage(@queue,@msg)
 
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
         format.json { render json: @job, status: :created, location: @job }

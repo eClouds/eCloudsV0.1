@@ -69,11 +69,11 @@ class ExecutionsController < InheritedResources::Base
       @execution.start_date = @now
 
       #acá pongo el mensaje en la cola
-      @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-      @queue = @sqs.queue(PRESCHEDULING_QUEUE, false )
+      @queueOps= QueueOperations.new
+      @queue = @queueOps.getQueue(PRESCHEDULING_QUEUE)
 
       @msg = PROCESS_EXECUTION_MSG + ':' + @execution.id.to_s
-      @queue.send_message(@msg)
+      @queueOps.sendMessage(@queue,@msg)
 
       @event = Event.new(:code => 0, :description => EXECUTION_LAUNCHED+@execution.id.to_s, :event_date => @now)
       @event.execution = @execution

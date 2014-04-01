@@ -7,9 +7,9 @@ task :checkPreschedulingQueue => :environment do
 
     puts 'I am going to check the queue for executions'
 
-    @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-    @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
-    @msg = @queue.receive
+    @queueOps= QueueOperations.new
+    @queue = @queueOps.getQueue(PRESCHEDULING_QUEUE)
+    @msg = @queueOps.receiveMessage(@queue)
 
 
 
@@ -52,9 +52,8 @@ end
 
 
 def assignExecution(msg)
-
-  @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-  @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
+  @queue
+  @queueOps = @sqs.queue(PRESCHEDULING_QUEUE, false)
   @msg = msg
 
 
@@ -139,9 +138,8 @@ end
 
 
 def checkForExecutions(msg)
-
-  @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-  @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
+  @queueOps= QueueOperations.new
+  @queue = @queueOps.getQueue(PRESCHEDULING_QUEUE)
   @msg = msg
 
   puts 'I just received the message:'
@@ -271,28 +269,17 @@ def checkForExecutions(msg)
     # ahpra pongo el mensaje en la cola para que lo terminen de organizar la ejecución
     @msg.delete
     @msg = ASSIGN_EXECUTION_MSG + ':'+@execution.id.to_s
-    @queue.send_message(@msg)
-
-
-
+    @queueOps.sendMessage(@queue,@msg)
 
 
   end
-
-
-
 
 end
 
 def checkForJobs(msg)
 
-
-
-
-
-
-  @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-  @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
+  @queueOps= QueueOperations.new
+  @queue = @queueOps.getQueue(PRESCHEDULING_QUEUE)
   @msg = msg
 
   puts 'I just received the message:'
@@ -412,8 +399,8 @@ def checkForJobs(msg)
 
       @job.save
       # ahora debo poner el mensaje en la cola de scheduling
-      @queue = @sqs.queue(SCHEDULING_QUEUE, create=false)
-      @queue.send_message(@chosen_vm.hostname+';'+RUN_JOB_MSG + ';' + @job.id.to_s+';'+@job.application.installer_url+';'+@job.script_url+';'+@job.directory.name )
+      @queue = @queueOps.getQueue(SCHEDULING_QUEUE)
+      @queueOps.sendMessage(@queue,@chosen_vm.hostname+';'+RUN_JOB_MSG + ';' + @job.id.to_s+';'+@job.application.installer_url+';'+@job.script_url+';'+@job.directory.name )
       @job.status = JOBS_STATUS[:QUEUED] + ':'+@chosen_vm.AMI_name
       @job.save
       @chosen_vm.save
@@ -441,8 +428,8 @@ def checkJobStatus (msg)
 
   @queue_name = PRESCHEDULING_QUEUE
 
-
-  @queue = @sqs.queue(@queue_name, false)
+  @queueOps= QueueOperations.new
+  @queue = @queueOps.getQueue(@queue_name)
   @msg = msg
 
   puts 'I just received the message:'
