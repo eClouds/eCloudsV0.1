@@ -1,4 +1,4 @@
-class CloudFilesController < ApplicationController
+  class CloudFilesController < ApplicationController
 
   before_filter :auth_user!
 

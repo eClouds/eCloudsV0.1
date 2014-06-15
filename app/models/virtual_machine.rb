@@ -11,7 +11,7 @@ class VirtualMachine < ActiveRecord::Base
       return self.state
     else
       puts self.AMI_name
-      @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
+      @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID_EC2, AMAZON_SECRET_ACCESS_KEY_EC2)
 
       @vm_description = @ec2.describe_instances([self.AMI_name])
 

@@ -345,8 +345,10 @@ class ExecutionsController < InheritedResources::Base
             @input_value = @raw_input
             puts "------------------------------------ " + @raw_input.to_s
             puts @raw_inputs
-            @execution_input.value = @input_value
 
+            #Chequear si es un multipleSelectedItem
+            app_input.is_multiple_selecteditem ? @execution_input.value = @input_value.reject!{|c|c.empty?}.join(',') : @execution_input.value = @input_value
+            #Chequear si es un multipleSelectedItem
             if @execution_input.prefix != nil or @execution_input.prefix != ''
 
               @example_command = @example_command +'{'+@execution_input.prefix + ' '+ @execution_input.value+'}'+ ' '
@@ -465,7 +467,6 @@ class ExecutionsController < InheritedResources::Base
 
 
   end
-
 
   def calculateRemainingFunds(current_user)
     @date = Date.today

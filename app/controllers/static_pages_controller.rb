@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
       puts 'Entrooooo'
       @date = Date.today
 
-      @executions2 = Execution.where("end_date IS NOT NULL and start_date IS NOT NULL and start_date >= ?", @date) #and start_date > "+@date.to_s)
+      @executions2 = Execution.where("total_cost IS NOT NULL and end_date IS NOT NULL and start_date IS NOT NULL and start_date >= ?", @date) #and start_date > "+@date.to_s)
       @periodTotal = 0
       @computingTotal = 0
       @executions2.each do |exec|

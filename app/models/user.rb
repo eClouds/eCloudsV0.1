@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
 
   has_many :jobs
 
-  before_create { self.funds=100 }
+  before_create { self.funds=4 }
 
   def to_s
     email

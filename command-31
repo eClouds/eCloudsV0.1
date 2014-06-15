@@ -1,2 +1,2 @@
-wget https://s3.amazonaws.com/Eclouds/uploads/cloud_file/avatar/22/proteinsequence.fasta
-./command-blastn   proteinsequence.fasta  env_nt.gz 2>> jobsOutputs/errors.txt
+wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/62/outseq.faa.txt
+./command-blastp   outseq.faa.txt  aclame_proteins_all_0.4.faa.gz  8  1e-5 2>> jobsOutputs/errors.txt

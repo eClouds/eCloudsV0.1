@@ -48,7 +48,7 @@
                   </div>
               <% elsif input.is_selecteditem? %>
                   <div class="field">
-                  <%= collection_select(:inputs,i , SelectedItem.find_all_by_input_id(input.id), :value, :name, prompt: true ) %>
+                  <%= collection_select(:inputs,i , SelectedItem.find_all_by_input_id(input.id), :value, :name, {prompt: true}, {multiple: input.is_multiple_selecteditem} ) %>
 
                   </div>
               <% else %>

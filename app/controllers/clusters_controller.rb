@@ -91,7 +91,7 @@ class ClustersController < ApplicationController
 
   def add_virtual_machines
 
-    @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
+    @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID_EC2, AMAZON_SECRET_ACCESS_KEY_EC2)
 
     @cluster = Cluster.find(params[:id])
     @number_of_vms = params["vms_number_input" ]

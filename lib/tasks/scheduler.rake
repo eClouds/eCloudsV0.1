@@ -91,11 +91,15 @@ def assignExecution(msg)
 
     @virtual_machines = @cluster.virtual_machines
 
+    puts @virtual_machines, @cluster , '=================='
+
     @virtual_machines.each do |vm|
       #reviso que el hostname no sea pending
+      puts 'va'
       vm.current_state
 
       if vm.hostname != 'pending' or vm.hostname !=''
+        puts 'va2'
         @msg = vm.hostname+';'+SWITCH_TO_QUEUE_MSG+';'+@queue_name
         @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
         @queue.send_message(@msg)
@@ -617,11 +621,14 @@ def checkJobStatus (msg)
 
       #@execution_total_cost += vm.execution_hours*  VM_PRICING[vm.execution.vm_type]
       @execution_total_cost += vm.execution_hours * VM_PRICING[@execution.vm_type]
+
     end
 
     #le pongo que la fecha de finalización es ahora
     @end_date = DateTime.now
     @execution.end_date = @end_date
+    #OJO!!!! TODO
+    @execution.total_cost = 0.02
     @execution.save
 
 
@@ -840,7 +847,7 @@ end
 # lanza una máquina virtual con el tipo de instancia dado por parametro, y la asocia el cluster dado por parametro
 def launch_one_vm(instance_type, cluster)
 
-  @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
+  @ec2 = Aws::Ec2.new(ENV["AMAZON_ACCESS_KEY_ID_EC2"], ENV["AMAZON_SECRET_ACCESS_KEY_EC2"])
 
   @instances = @ec2.launch_instances( ENV["AMI_APP_CIENTIFICAS_NAME"] ,:group_ids => [ENV["SECURITY_GROUP"]],
                                       :instance_type => instance_type ,
@@ -884,7 +891,7 @@ def stop_one_vm(vm, user)
   if !(vm.state == "stopped" or vm.state == "stopping")
 
 
-    @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
+    @ec2 = Aws::Ec2.new(ENV["AMAZON_ACCESS_KEY_ID_EC2"], ENV["AMAZON_SECRET_ACCESS_KEY_EC2"])
 
     @ec2.stop_instances([vm.AMI_name])
 
