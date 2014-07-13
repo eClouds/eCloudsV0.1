@@ -13,7 +13,7 @@ class Execution < ActiveRecord::Base
   has_many :inputs , :dependent => :destroy
   has_one :cluster , :dependent => :destroy
   #default_scope order(:start_date, :name)
-  default_scope order('start_date desc')
+  default_scope order('created_at desc')
 
 
   def completed?

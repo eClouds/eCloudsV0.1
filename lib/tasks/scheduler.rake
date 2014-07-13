@@ -575,10 +575,12 @@ def checkJobStatus (msg)
 
   if ( @parts[0]== FINISHED_JOB_MSG)
 
-    # ahora encuentro el job que me dicen que esta en estado instalando
+    # ahora encuentro el job que me dicen que esta en estado Finalizado
     @job = Job.find(@parts[1])
     @job.status = JOBS_STATUS[:FINISHED]
     @job.save
+
+    puts @job.to_s
 
     @hostname = @parts[2]
     @execution = @job.execution
@@ -588,6 +590,7 @@ def checkJobStatus (msg)
     # esto quiere decir que la ejecución se ha terminado
     if @execution.running_jobs == 0
       @execution.ended = true
+      puts "Finished" + @job.to_s
     end
 
     @execution.save
@@ -613,29 +616,36 @@ def checkJobStatus (msg)
 
     @msg.delete
 
-    @execution_total_cost = 0
-        #si la ejecución terminó, apago todas las máquinas virtuales
-    @virtual_machines.each do |vm|
+    #si la ejecución terminó
+    if @execution.ended?
 
-      stop_one_vm(vm,@execution.cluster.user)
+      @execution_total_cost = 0
 
-      #@execution_total_cost += vm.execution_hours*  VM_PRICING[vm.execution.vm_type]
-      @execution_total_cost += vm.execution_hours * VM_PRICING[@execution.vm_type]
+      #si la ejecución terminó, apago todas las máquinas virtuales
+      @virtual_machines.each do |vm|
+
+        stop_one_vm(vm, @execution.cluster.user)
+
+        #@execution_total_cost += vm.execution_hours*  VM_PRICING[vm.execution.vm_type]
+        @execution_total_cost += (vm.execution_hours * VM_PRICING[@execution.vm_type])
+
+      end
+
+      #le pongo que la fecha de finalización es ahora
+      @end_date = DateTime.now
+      @execution.end_date = @end_date
+
+      #OJO!!!! TODO
+      @execution.total_cost = @execution_total_cost
+      @execution.save
+
+
+      @event = Event.new(:code => 10, :description => EXECUTION_FINISHED+@execution.id.to_s, :event_date => @end_date)
+      @event.execution = @execution
+      @event.save
 
     end
 
-    #le pongo que la fecha de finalización es ahora
-    @end_date = DateTime.now
-    @execution.end_date = @end_date
-    #OJO!!!! TODO
-    @execution.total_cost = 0.02
-    @execution.save
-
-
-
-    @event = Event.new(:code => 10, :description => EXECUTION_FINISHED+@execution.id.to_s, :event_date => @end_date)
-    @event.execution = @execution
-    @event.save
 
   end
 
