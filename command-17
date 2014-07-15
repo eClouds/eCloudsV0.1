@@ -1,4 +1,0 @@
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
-./command-blastp   Hv_proteins_final.fasta  HvsatatrixvsRefSeq.bp 2>> jobsOutputs/errors.txt

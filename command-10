@@ -1,2 +1,0 @@
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/29/proteinsequence.fasta
-./command-blastp   proteinsequence.fasta  out.txt 2>> jobsOutputs/errors.txt

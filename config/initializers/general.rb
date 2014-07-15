@@ -71,12 +71,15 @@ if Rails.env.production?
 
   PRESCHEDULING_QUEUE = 'preschedulingProduction'
   SCHEDULING_QUEUE = 'schedulingProduction'
+  S3_BUCKET = ENV["S3_BUCKET_PROD"]
 
 elsif Rails.env.development?
   PRESCHEDULING_QUEUE = 'preschedulingDevelopment'
   SCHEDULING_QUEUE = 'schedulingDevelopment'
+  S3_BUCKET = ENV["S3_BUCKET_DEV"]
 
 else
   PRESCHEDULING_QUEUE = 'preschedulingDevelopment'
   SCHEDULING_QUEUE = 'schedulingDevelopment'
+  S3_BUCKET = ENV["S3_BUCKET_STAGING"]
 end

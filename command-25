@@ -1,3 +1,0 @@
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/12/HumanGeneforboneglaProtein.fasta
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/54/AllProteins-plasmid.faa.txt
-./command-blastp   HumanGeneforboneglaProtein.fasta  blastp-out.txt 2>> jobsOutputs/errors.txt

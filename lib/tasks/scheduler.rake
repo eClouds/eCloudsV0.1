@@ -1,7 +1,5 @@
 task :checkPreschedulingQueue => :environment do
 
-
-
   while 1 < 2 do
     sleep 10
 
@@ -10,8 +8,6 @@ task :checkPreschedulingQueue => :environment do
     @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
     @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
     @msg = @queue.receive
-
-
 
     puts 'I just received the message:'
     puts @msg
@@ -56,8 +52,6 @@ def assignExecution(msg)
   @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
   @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
   @msg = msg
-
-
 
   puts 'I just received the message:'
   puts @msg
@@ -127,7 +121,6 @@ def assignExecution(msg)
 
       @queue.send_message(@msg)
       puts @msg
-
 
       job.save
     end
@@ -216,7 +209,6 @@ def checkForExecutions(msg)
       puts 'antes de todo'
       puts '-----------------------'
 
-
       for i in 1..@jobs_number
         puts 'creating job ' + i.to_s
 
@@ -277,23 +269,11 @@ def checkForExecutions(msg)
     @msg = ASSIGN_EXECUTION_MSG + ':'+@execution.id.to_s
     @queue.send_message(@msg)
 
-
-
-
-
   end
-
-
-
 
 end
 
 def checkForJobs(msg)
-
-
-
-
-
 
   @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
   @queue = @sqs.queue(PRESCHEDULING_QUEUE, false)
@@ -304,9 +284,7 @@ def checkForJobs(msg)
 
   @parts = @msg.to_s.split(':')
 
-
   puts @parts[0]
-
 
   if(@parts[0]<=> SCHEDULE_JOB_MSG)
 
@@ -434,17 +412,14 @@ def checkForJobs(msg)
 
   end
 
-
 end
 
 # revisa el estatus de cualquier job que se ponga en la cola
 def checkJobStatus (msg)
 
-
   @sqs = Aws::Sqs.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
 
   @queue_name = PRESCHEDULING_QUEUE
-
 
   @queue = @sqs.queue(@queue_name, false)
   @msg = msg
@@ -675,7 +650,7 @@ def checkJobStatus (msg)
 end
 
 
-####### funciones
+####### funciones   #################
 
 # saca de los inputs pasados por parámtero cuál es el directorio
 # si no hay ninguno retorna nil
@@ -807,25 +782,13 @@ def create_job cluster, cloud_file_inputs, all_inputs, base_command, execution
     stream.puts @command + ' 2>> jobsOutputs/errors.txt'
   end
 
-
-
   puts '-------------------------------'
   puts 'inputs succesfully added to command file'
-
-
 
   f=File.open(@commandFilename, 'r')
 
   @s3 = Aws::S3.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-  if Rails.env.development?
-    @bucket = @s3.bucket(ENV["S3_BUCKET_DEV"])
-  elsif  Rails.env.staging?
-    @bucket = @s3.bucket(ENV["S3_BUCKET_STAGING"])
-  elsif  Rails.env.production?
-    @bucket = @s3.bucket(ENV["S3_BUCKET_PROD"])
-
-  end
-
+  @bucket = @s3.bucket(S3_BUCKET)
   puts @bucket.full_name
 
   # el permiso que toca ponerle es public-read
@@ -836,33 +799,23 @@ def create_job cluster, cloud_file_inputs, all_inputs, base_command, execution
 
   puts 'successfully uploaded command file to ' + @commandFileUrl
 
-
-
   @job.script_url = @commandFileUrl
 
   @job.save
 
-
-
-
-
-
-
   return @job
-
-
 
 end
 
 # lanza una máquina virtual con el tipo de instancia dado por parametro, y la asocia el cluster dado por parametro
 def launch_one_vm(instance_type, cluster)
 
-  @ec2 = Aws::Ec2.new(ENV["AMAZON_ACCESS_KEY_ID_EC2"], ENV["AMAZON_SECRET_ACCESS_KEY_EC2"])
+  @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID_EC2, AMAZON_SECRET_ACCESS_KEY_EC2)
 
-  @instances = @ec2.launch_instances( ENV["AMI_APP_CIENTIFICAS_NAME"] ,:group_ids => [ENV["SECURITY_GROUP"]],
+  @instances = @ec2.launch_instances( AMI_APP_CIENTIFICAS_NAME, :group_ids => [SECURITY_GROUP],
                                       :instance_type => instance_type ,
                                       :user_data => 'EClouds Instance',
-                                      :key_name => ENV["KEY_PAIR_NAME"])
+                                      :key_name => KEY_PAIR_NAME)
   @instance = @instances[0]
 
   @name = @instance[:aws_instance_id]
@@ -901,7 +854,7 @@ def stop_one_vm(vm, user)
   if !(vm.state == "stopped" or vm.state == "stopping")
 
 
-    @ec2 = Aws::Ec2.new(ENV["AMAZON_ACCESS_KEY_ID_EC2"], ENV["AMAZON_SECRET_ACCESS_KEY_EC2"])
+    @ec2 = Aws::Ec2.new(AMAZON_ACCESS_KEY_ID_EC2, AMAZON_SECRET_ACCESS_KEY_EC2)
 
     @ec2.stop_instances([vm.AMI_name])
 

@@ -1,2 +1,0 @@
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/40/Hv_proteins_final.fasta
-./command-blastp   Hv_proteins_final.fasta  output-blastp.txt 2>> jobsOutputs/errors.txt

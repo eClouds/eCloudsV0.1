@@ -1,3 +1,0 @@
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/54/AllProteins-plasmid.faa.txt
-wget https://s3.amazonaws.com/EcloudsStaging/uploads/cloud_file/avatar/57/Plasmido_datos.fna
-./command-blastn   AllProteins-plasmid.faa.txt  aclame_proteins_all_0.4.faa.gz  8  10 2>> jobsOutputs/errors.txt
