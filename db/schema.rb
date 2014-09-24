@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140901162509) do
+ActiveRecord::Schema.define(:version => 20140924141037) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -126,8 +126,8 @@ ActiveRecord::Schema.define(:version => 20140901162509) do
     t.datetime "end_date"
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "base_command"
     t.integer  "number_of_jobs"
     t.integer  "computing_hours"
@@ -140,7 +140,7 @@ ActiveRecord::Schema.define(:version => 20140901162509) do
     t.string   "vm_type"
     t.decimal  "estimated_time_minutes"
     t.integer  "cluster_id"
-    t.string   "example_command"
+    t.text     "example_command",        :limit => 255
     t.string   "queue_name"
     t.integer  "running_jobs"
     t.integer  "finished_jobs"
