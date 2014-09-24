@@ -37,3 +37,22 @@ function set_display(e, div) {
     }
 
 }
+
+function set_display_conditional(input_id_pre,conditionalJson){
+    var $currentValue = $("#input-"+input_id_pre).val();
+    var $conditionalsArray = conditionalJson;
+    console.log($currentValue);
+
+    for(i=0; i<$conditionalsArray.length; i++){
+        var $input_id_post = $conditionalsArray[i].input_id_post;
+        var $value_to_compare =   $conditionalsArray[i].value;
+        if($currentValue == $value_to_compare){
+            $('#'+$input_id_post).show();
+            $('#'+$input_id_post).css("width:100");
+        }else{
+            $('#'+$input_id_post).hide();
+        }
+    }
+
+
+}

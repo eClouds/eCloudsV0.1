@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140614040912) do
+ActiveRecord::Schema.define(:version => 20140901162509) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -88,6 +88,14 @@ ActiveRecord::Schema.define(:version => 20140614040912) do
     t.integer  "execution_id"
   end
 
+  create_table "conditionals", :force => true do |t|
+    t.string   "value"
+    t.integer  "input_id_pre"
+    t.integer  "input_id_post"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "directories", :force => true do |t|
     t.string   "name"
     t.string   "directory_path"
@@ -158,6 +166,7 @@ ActiveRecord::Schema.define(:version => 20140614040912) do
     t.boolean  "visible"
     t.boolean  "is_selecteditem"
     t.boolean  "is_multiple_selecteditem"
+    t.boolean  "is_precondition"
   end
 
   create_table "instance_types", :force => true do |t|

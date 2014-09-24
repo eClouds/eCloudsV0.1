@@ -1,8 +1,6 @@
 #version=1.0
 task :checkJobsQueue => :environment do
 
-
-
   puts 'I will check if I have an execution queue assigned'
 
   if File.exist?('exec_queue_name')
@@ -133,7 +131,7 @@ task :checkJobsQueue => :environment do
         @job_id = @msg_parts[1].to_s
 
         @s3 = Aws::S3.new(AMAZON_ACCESS_KEY_ID, AMAZON_SECRET_ACCESS_KEY)
-        @bucket = @s3.bucket('EcloudsStaging')
+        @bucket = @s3.bucket(S3_BUCKET)
 
         for i in 0..(@outputFiles.size-1) do
 

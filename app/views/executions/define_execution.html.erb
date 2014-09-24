@@ -1,8 +1,4 @@
-
 <%= form_for(@execution) do |e|%>
-
-
-
     <% if @execution.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@execution.errors.count, "error") %> prohibited this application from being saved:</h2>
@@ -16,61 +12,68 @@
 
     <% end %>
 
-
     <br>
     <h4> Define the Inputs for the Application: <%= @application.name %> <%= @application.version %></h4>
     <ul class="breadcrumb">
       <%= link_to "Basic Params |", edit_execution_path(@execution) %>
     </ul>
 
-
     <div class="well">
+      <% #Variables para crear los inputs y poder ocultarlos  %>
       <% i=0 %>
+      <% display_is_id_post='visible;' %>
+      <% display_is_id_pre='' %>
+
       <% @application.inputs.order('position asc').each do |input|%>
+
+         <% if Conditional.find_all_by_input_id_post(input.id).any? %>
+              <% display_is_id_post='none;' %>
+          <%else%>
+            <% display_is_id_post='visible;' %>
+         <% end %>
+
+          <% if input.is_precondition? %>
+              <%condition = raw Conditional.find_all_by_input_id_pre(input.id).to_json %>
+              <% display_is_id_pre = "set_display_conditional(#{input.id},#{condition})" %>
+
+          <% else %>
+              <% display_is_id_pre = '' %>
+          <% end %>
+
+         <div class="table" id="<%= input.id %>" style="display: <%= display_is_id_post %>">
           <% if input.visible? %>
               <h4> <%=input.name%> </h4>
               Description: <strong><%=input.description%></strong>
 
-
+              <div class="field">
               <% if input.is_file?%>
-                  <div class="field">
                     <%= link_to raw('<i class="icon-file icon-white"></i> Select File') , "#fileModal", :onclick => "set_field('#{(i).to_s}');" ,:class => "btn btn-info", :data => {:toggle => "modal"}, :role => "button" , :id => "but"+(i+1).to_s%>
                     <%= label_tag "lab"+(i+1).to_s, "", :id => 'lab'+(i+1).to_s%>
                     <%= hidden_field :inputs, i, :id => 'inputs_'+(i).to_s%>
-                  </div>
 
               <% elsif input.is_directory?%>
-
-                  <div class="field">
                     <%= link_to raw('<i class="icon-folder-open icon-white"></i> Select Directory') , "#directoryModal", :onclick => "set_field('#{(i).to_s}');" ,:class => "btn btn-success", :data => {:toggle => "modal"}, :role => "button" , :id => "but"+(i+1).to_s%>
                     <%= label_tag "lab"+(i+1).to_s, "", :id => 'lab'+(i+1).to_s%>
                     <%= hidden_field :inputs, i, :id => 'inputs_'+(i).to_s%>
-                  </div>
               <% elsif input.is_selecteditem? %>
-                  <div class="field">
-                  <%= collection_select(:inputs,i , SelectedItem.find_all_by_input_id(input.id), :value, :name, {prompt: true}, {multiple: input.is_multiple_selecteditem} ) %>
-
-                  </div>
+                  <%= collection_select(:inputs,i , SelectedItem.find_all_by_input_id(input.id), :value, :name, {prompt: true}, {multiple: input.is_multiple_selecteditem, onchange: display_is_id_pre, id: "input-"+input.id.to_s} ) %>
               <% else %>
 
                   <% if input.value != nil || input.value != ''%>  <br>
                       The value of this parameter has been preset for you, you can change it if you want
-
                       <br>
-                      <%= text_field :inputs, i , :value => input.value%>
+                      <%= text_field :inputs, i , :value => input.value, :onchange => display_is_id_pre, :id => "input-"+input.id.to_s%>
                   <% else%>
-                      <%= text_field :inputs, i %>
+                      <%= text_field :inputs, i, :onchange => display_is_id_pre, :id => "input-"+input.id.to_s %>
                   <% end %>
-
-
-
               <% end %>
               <ul class="nav nav-list"><li class="divider"></li>   </ul>
+              </div>
           <% end %>
 
           <% i=i+1 %>
 
-
+            </div>
       <% end %>
     </div>
     <br>

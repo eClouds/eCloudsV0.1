@@ -814,7 +814,7 @@ def launch_one_vm(instance_type, cluster)
 
   @instances = @ec2.launch_instances( AMI_APP_CIENTIFICAS_NAME, :group_ids => [SECURITY_GROUP],
                                       :instance_type => instance_type ,
-                                      :user_data => 'EClouds Instance',
+                                      :user_data => Rails.env.to_s,
                                       :key_name => KEY_PAIR_NAME)
   @instance = @instances[0]
 

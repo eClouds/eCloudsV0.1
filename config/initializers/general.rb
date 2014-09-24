@@ -62,11 +62,6 @@ EXECUTION_FINISHED='The following execution has finished: '
 
 
 
-
-
-
-
-
 if Rails.env.production?
 
   PRESCHEDULING_QUEUE = 'preschedulingProduction'
