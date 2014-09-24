@@ -305,7 +305,7 @@ class ExecutionsController < InheritedResources::Base
         @execution_input = app_input.dup
         if app_input.visible?
 
-          if app_input.is_file
+          if app_input.is_file && @raw_input.to_i != 0
             @file_id = @raw_input.to_i
             @cloud_file = CloudFile.find(@file_id)
 
@@ -321,7 +321,7 @@ class ExecutionsController < InheritedResources::Base
 
             end
 
-          elsif app_input.is_directory
+          elsif app_input.is_directory && @raw_input.to_i != 0
 
             @directory_id = @raw_input.to_i
             @directory = Directory.find(@directory_id)
