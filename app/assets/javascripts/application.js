@@ -93,10 +93,6 @@ function get_items_from_table(table, input){
 
     }
     values =  JSON.stringify(values)
-    alert(values);
+
     hiddenInput.value = values;
-}
-function set_value_conditional(id, value){
-    alert(value.value);
-    document.getElementById(id).value = value.value;
 }
