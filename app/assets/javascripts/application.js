@@ -56,3 +56,47 @@ function set_display_conditional(input_id_pre,conditionalJson){
 
 
 }
+
+function add_display_new_item_inputs(table){
+
+    var table = document.getElementById(table);
+
+    var rowsCount = table.rows.length;
+
+    var row = table.insertRow(rowsCount);
+    row.innerHTML = table.rows[1].innerHTML;
+
+}
+function remove_display_new_item_inputs(table){
+
+    var table = document.getElementById(table);
+    var rowsCount = table.rows.length;
+    if(rowsCount>2){
+        table.deleteRow(rowsCount-1);
+    }
+}
+function get_items_from_table(table, input){
+    var table = document.getElementById(table);
+    var hiddenInput = document.getElementById(input);
+
+    var rowsCount = table.rows.length;
+
+    var values = [];
+
+    for(row=1; row < rowsCount; row++){
+        var name = table.rows[row].cells[0].firstElementChild.value;
+        var value =  table.rows[row].cells[1].firstElementChild.value;
+        console.log("name: "+name);
+        console.log("value: "+value);
+
+        values.push({name: name, value: value});
+
+    }
+    values =  JSON.stringify(values)
+    alert(values);
+    hiddenInput.value = values;
+}
+function set_value_conditional(id, value){
+    alert(value.value);
+    document.getElementById(id).value = value.value;
+}

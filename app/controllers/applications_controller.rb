@@ -153,11 +153,6 @@ class ApplicationsController < InheritedResources::Base
     @example_command_names = @application.begin_command + @precommand_example_names + ' '+@application.end_command
 
     @application.save
-
-
-
-
-
   end
 
   def update

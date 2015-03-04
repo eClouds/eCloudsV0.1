@@ -201,7 +201,9 @@ def checkForExecutions(msg)
 
       inputs_cloud_files.each do |cf_in|
         puts '-----------------------'
-        puts cf_in.name.to_s
+        if !cf_in.nil?
+          puts cf_in.name.to_s
+        end
 
       end
 
@@ -245,7 +247,10 @@ def checkForExecutions(msg)
 
       inputs_cloud_files.each do |cf_in|
         puts '-----------------------'
-        puts cf_in.name.to_s
+        if !cf_in.nil?
+          puts cf_in.name.to_s
+        end
+
 
       end
 
@@ -687,14 +692,16 @@ end
 
 # busca en la cadena string un patrón y lo reemplaza con replacement
 def find_replace string, pattern, replacement
-  string.gsub(pattern , replacement)
+ string.gsub(/\s+#{pattern}\s+/ , '  '+replacement+'  ')
 end
 
 def create_job cluster, cloud_file_inputs, all_inputs, base_command, execution
 
   cloud_file_inputs.each do |cf_in|
     puts '-----------------------'
-    puts cf_in.name.to_s
+    if !cf_in.nil?
+      puts cf_in.name.to_s
+    end
 
   end
 
@@ -735,15 +742,16 @@ def create_job cluster, cloud_file_inputs, all_inputs, base_command, execution
       puts base_command
 
       if input.is_file?
-
-        @value = @value + input.cloud_file.name
-
+        if !input.cloud_file.nil?
+          @value = @value + input.cloud_file.name
+        else
+          @value = @value + 'NULL'
+        end
       else
-
         @value = @value + input.value
       end
 
-      @pattern = 'INPUT'+(input.position-1).to_s
+      @pattern = "INPUT"+(input.position-1).to_s
       @replacement = @value
 
       puts @pattern
@@ -772,9 +780,14 @@ def create_job cluster, cloud_file_inputs, all_inputs, base_command, execution
     for i in 0..(cloud_file_inputs.size-1) do
 
       @inputActual = cloud_file_inputs[i]
-      puts @inputActual.complete_url
-      stream.puts 'wget ' + @inputActual.complete_url
-      puts 'adding input to wget:'+ @inputActual.complete_url
+
+      if !@inputActual.nil?
+        puts @inputActual.complete_url
+        stream.puts 'wget ' + @inputActual.complete_url
+        puts 'adding input to wget:'+ @inputActual.complete_url
+      else
+        puts 'adding input nil'
+      end
     end
 
     # acá le pongo el input base que falta colocarlo bien

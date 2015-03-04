@@ -23,6 +23,7 @@ ECloudsV01::Application.routes.draw do
   resources :virtual_machine_events
 
   #resources
+  resources :conditionals
   resources :directories
   resources :cloud_files
   resources :instance_types
@@ -82,9 +83,11 @@ ECloudsV01::Application.routes.draw do
 
   #rutas para crear las aplicaciones
   match "add_inputs/:application_id/" => "applications#add_inputs", :as => "add_inputs"
+  match "add_conditionals_inputs/:application_id" => "conditionals#add_conditionals_inputs", :as => "add_conditionals_inputs"
   match "organize_parameters/:application_id/" => "applications#organize_parameters", :as => "organize_parameters"
   match "decrease_position/:application_id/:input_id" => "applications#decrease_position_parameter" , :as => "decrease_position_parameter"
   match "increase_position/:application_id/:input_id" => "applications#increase_position_parameter" , :as => "increase_position_parameter"
+
   #match "add_parameters/:application_id/" => "applications#add_parameters", :as => "add_parameters"
   #match "add_one_input/:input_id/:application_id" => "applications#add_one_input", :as => "add_one_input"
 

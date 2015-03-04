@@ -94,6 +94,10 @@ task :crear_selectedItems_MXP => :environment do
 end
 
 task :crear_selectedItems_background => :environment do
+
+  SelectedItem.find_all_by_state("En Proceso")
+
+
   SelectedItem.create(name:"Extent", value:"extent").save
   SelectedItem.create(name:"Regions", value:"regions").save
   SelectedItem.create(name:"ch", value:"ch").save
@@ -112,5 +116,15 @@ task :crear_selectedItems_background => :environment do
 
 
 end
+
+  task :prueba1 => :environment do
+
+    string = "sudo R --no-save --args    INPUT0  INPUT1  INPUT2  INPUT3  INPUT4  INPUT5  INPUT6  INPUT7  INPUT8  INPUT9  INPUT10  INPUT11  INPUT12  INPUT13  INPUT14  INPUT15  INPUT16  INPUT17  INPUT18  INPUT19 < wrapperEclouds.R"
+    pattern = "INPUT"+1.to_s
+    print string.gsub(/\s*#{pattern}\s+/ , ' 2w ')
+
+    print SelectedItem.find_all_by_input_id(183).to_json
+  end
+
 
 end

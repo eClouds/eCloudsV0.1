@@ -52,6 +52,9 @@
             <th>Value</th>
             <th>File</th>
             <th>Directory</th>
+            <th>Selected Item</th>
+            <th>Selected Items Multiple</th>
+            <th>Pre-Condition</th>
             <th></th>
           </tr>
           <% @application.inputs.each do |input| %>
@@ -62,6 +65,9 @@
                 <td> <%= input.value %></td>
                 <td><% if input.is_file? %> X <% end %></td>
                 <td><% if input.is_directory? %> X <% end %></td>
+                <td><% if input.is_selecteditem? %> X <% end %></td>
+                <td><% if input.is_multiple_selecteditem? %> X <% end %></td>
+                <td><% if input.is_precondition? %> X <% end %></td>
                 <td><%= link_to 'Delete', input, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
 
@@ -69,8 +75,6 @@
         </table>
 
     <% end %>
-
-
 
 
     <h2> Add Input: </h2>
@@ -85,7 +89,7 @@
         <div class="field">
           <%= f.label :is_file, :html=>{:class=>"checkbox inline"} do%>
               <%= f.check_box :is_file , :onclick=>"set_display(this, 'fileButton')"%>
-              It's a file?
+              Is it a file?
           <% end %>
         </div>
 
@@ -93,7 +97,30 @@
 
           <%= f.label :is_directory, :html=>{:class=>"checkbox inline"} do%>
               <%= f.check_box :is_directory, :onclick=>"set_display(this, 'directoryButton')" %>
-              It's a directory?
+              Is it a directory?
+          <% end %>
+        </div>
+
+        <div class="field">
+
+          <%= f.label :is_selecteditem, :html=>{:class=>"checkbox inline"} do%>
+              <%= f.check_box :is_selecteditem, :onclick=>"set_display(this, 'selectedItems');set_display(this, 'selectedMultipleItems');" %>
+              Is it a selected item?
+          <% end %>
+        </div>
+
+        <div class="field" display="none" id="selectedMultipleItems" style="display: none;">
+
+          <%= f.label :is_multiple_selecteditem, :html=>{:class=>"checkbox inline"} do%>
+              <%= f.check_box :is_multiple_selecteditem %>
+              Is it a multiple selected item?
+          <% end %>
+        </div>
+
+        <div class="field">
+          <%= f.label :is_precondition, :html=>{:class=>"checkbox inline"} do%>
+              <%= f.check_box :is_precondition %>
+              Is it a precondition input (Some value makes appear other inputs)?
           <% end %>
         </div>
 
@@ -121,6 +148,14 @@
             <%= label_tag "lab"+(i+1).to_s, "", :id => 'lab'+(i+1).to_s%>
             <%= f.hidden_field :value,:id => 'inputs_'+(i).to_s%>
           </div>
+
+
+         <div class="field" id="selectedItems" style="display: none;">
+           <%=  f.label :value %>
+           <%= link_to raw('<i class="icon-folder-open icon-white"></i> Add Items for Input') , "#selectedItemsModal", :onclick => "set_field('#{(i).to_s}');" ,:class => "btn btn-success", :data => {:toggle => "modal"}, :role => "button" , :id => "but"+(i+1).to_s%>
+           <%= label_tag "lab"+(i+1).to_s, "", :id => 'lab'+(i+1).to_s%>
+           <%= hidden_field 'input_items_json', "", :id => 'input_items_json' %>
+         </div>
 
         <div class="field">
           <%= f.label :description %>
@@ -193,6 +228,21 @@
             </ul>
           </div>
 
+        </div>
+      </div>
+    </div>
+
+    <div id="selectedItemsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="selectedItemModal" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="selectedItemModal">Items:</h3>
+      </div>
+      <div class="well">
+        <div class="modal-body">
+              <%= render :partial => 'selected_items/selected_items' %>
+        </div>
+        <div class="actions text-right">
+            <%=  tag "input", {"class" => "btn actions text-right", "type" => "button", "value" => "Finish", "onclick" => 'get_items_from_table("tableItems","input_items_json")', "data-dismiss" => "modal", "aria-hidden" => "true"} %>
         </div>
       </div>
     </div>

@@ -10,4 +10,6 @@ class Input < ActiveRecord::Base
   belongs_to :execution
   belongs_to :cloud_file
   belongs_to :directory
+
+  has_many :selected_items
 end

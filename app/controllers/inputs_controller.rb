@@ -10,8 +10,16 @@ class InputsController < InheritedResources::Base
 
       respond_to do |format|
         if @application.save
-          format.html { redirect_to organize_parameters_path(@application), notice: 'Input successfully added' }
-          format.json { render json: @application, status: :created, location: @application}
+
+          if @application.inputs.where(is_precondition: true).any?
+            format.html { redirect_to add_conditionals_inputs_path(@application), notice: 'Input successfully added' }
+            format.json { render json: @application, status: :created, location: @application}
+          else
+            format.html { redirect_to organize_parameters_path(@application), notice: 'Input successfully added' }
+            format.json { render json: @application, status: :created, location: @application}
+
+          end
+
         else
           format.html { render action: "new" }
           format.json { render json: @application.errors, status: :unprocessable_entity }
@@ -21,13 +29,24 @@ class InputsController < InheritedResources::Base
 
     else
 
-      @input = Input.new(params[:input]   )
+      @input = Input.new(params[:input])
 
       @application = Application.find(@input.application_id)
 
 
+      #############################
+      # If there are selected_items
+      #############################
 
+      if @input.is_selecteditem?
 
+        puts params[:input_items_json]
+        items_json = JSON.parse(params[:input_items_json][0])
+        @selected_items = SelectedItem.create(items_json)
+        @input.selected_items << @selected_items
+
+      end
+      #############################
       respond_to do |format|
         if @input.save
           format.html { redirect_to add_inputs_path(@application), notice: 'Input successfully added' }
