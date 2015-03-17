@@ -126,7 +126,7 @@ ECloudsV01::Application.configure do
   config.assets.debug = true
 
 
-  config.action_mailer.default_url_options = { :host => 'prod-eclouds.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'prod-ecloudshumboldt.herokuapp.com' }
 
   config.action_mailer.smtp_settings = {
       :address => ENV["SMTP_PROD"],
